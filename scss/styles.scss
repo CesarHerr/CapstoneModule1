@@ -1,7 +1,14 @@
 @use '_reset';
+@use '_mixins';
 
 $color: (
   "dark": #272a31,
   "fresh": #ec5242,
   "light" : #d3d3d3
 );
+
+.header__social, .header__desktoplinks {
+  display: none;
+}
+
+

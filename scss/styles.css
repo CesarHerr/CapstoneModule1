@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 /* Reseteamos los margin y paddings de todas las etiquetas */
 *,
 *::before,
@@ -26,7 +25,7 @@ body {
   min-height: 100vh;
   font-size: 100%;
   font-family: "Lato", sans-serif;
-  color: red;
+  color: #272a31;
 }
 
 /* Evitamos problemas con las imagenes */
@@ -70,7 +69,7 @@ label {
   font-family: inherit;
   font-size: inherit;
   -webkit-hyphens: auto;
-  hyphens: auto;
+          hyphens: auto;
   background-color: transparent;
   color: inherit;
   display: block;
@@ -82,3 +81,15 @@ svg {
   display: block;
   fill: currentColor;
 }
+
+/* 
+    Mixin con la Regla @content
+    👉 Nos permite introducir múltiples propiedades CSS dentro de un mixin
+    👉 Muy usado para Responsive Design
+*/
+/* Si usamos un mixin */
+/* Y con Mixin */
+/* Mixin para Responsive Design */
+.header__social, .header__desktoplinks {
+  display: none;
+}/*# sourceMappingURL=styles.css.map */
