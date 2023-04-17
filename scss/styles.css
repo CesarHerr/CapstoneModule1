@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* Reseteamos los margin y paddings de todas las etiquetas */
+
 *,
 *::before,
 *::after {
@@ -22,6 +22,7 @@ html {
 
 /* Configuramos la tipografía para toda la web */
 body {
+  background-color: #d3d3d3;
   min-height: 100vh;
   font-size: 100%;
   font-family: "Lato", sans-serif;
@@ -60,21 +61,6 @@ a {
   color: inherit;
 }
 
-/* Nivelamos problemas de tipografías y colocación de formularios */
-form,
-input,
-textarea,
-button,
-label {
-  font-family: inherit;
-  font-size: inherit;
-  -webkit-hyphens: auto;
-          hyphens: auto;
-  background-color: transparent;
-  color: inherit;
-  display: block;
-}
-
 /* Evitamos problemas con los SVG */
 svg {
   width: 100%;
@@ -82,14 +68,150 @@ svg {
   fill: currentColor;
 }
 
-/* 
+/*
     Mixin con la Regla @content
     👉 Nos permite introducir múltiples propiedades CSS dentro de un mixin
     👉 Muy usado para Responsive Design
 */
+
 /* Si usamos un mixin */
+
 /* Y con Mixin */
+
 /* Mixin para Responsive Design */
-.header__social, .header__desktoplinks {
+.header__social,
+.header__desktoplinks {
   display: none;
-}/*# sourceMappingURL=styles.css.map */
+}
+
+.headline {
+  padding-top: 100px;
+  margin-left: 2em;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.headline h2 {
+  color: #ec5242;
+  font-weight: 400;
+  font-size: 1.3em;
+}
+
+.headline h1 {
+  color: #ec5242;
+  font-weight: 900;
+  font-size: 3rem;
+}
+
+.headline__p {
+  margin-top: 1em;
+  padding: 10px;
+  border: solid 2px #fff;
+  width: 90%;
+}
+
+.headline h3 {
+  color: #272a31;
+  font-weight: 900;
+  font-size: 1.5em;
+}
+
+.speakers {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.speakers img {
+  float: left;
+  background-color: blue;
+  display: inline;
+  width: 35%;
+  height: 10em;
+  position: relative;
+}
+
+.speakers__person--ul {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.speakers__person--ul p {
+  color: #ec5242;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+.speakers__person--ul span {
+  color: #272a31;
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+
+.speakers hr {
+  padding: 0 20px;
+  margin-top: -5px;
+}
+
+.speakers h3 {
+  color: #272a31;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.program {
+  background-color: #272a31;
+  color: #d3d3d3;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.program h2 {
+  color: #d3d3d3;
+  font-weight: 700;
+  font-size: 1.3em;
+  margin: 2em 0;
+}
+
+.program > p {
+  display: none;
+}
+
+.program li {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(100, 93, 93, 0.2549019608);
+  padding: 2em;
+  width: 90%;
+  margin: 1em 0;
+}
+
+.program li img {
+  width: 30%;
+}
+
+.program li h3 {
+  margin-left: 1em;
+  width: 60%;
+}
+
+.program li p {
+  margin-left: 1em;
+  width: 90%;
+}
+
+.program button {
+  background-color: #ec5242;
+  color: #d3d3d3;
+  padding: 1.5em;
+  margin-bottom: 2em;
+}

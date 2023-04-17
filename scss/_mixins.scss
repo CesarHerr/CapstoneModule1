@@ -1,40 +1,40 @@
-@mixin font( $argumento1 , $argumento2 , $argumento3 : 1rem){
-    color       : $argumento1;
-    font-weight : $argumento2;
-    font-size   : $argumento3;
+@mixin font( $argumento1:red , $argumento2 , $argumento3 : 1rem) {
+  color: $argumento1;
+  font-weight: $argumento2;
+  font-size: $argumento3;
 }
 
 //    @include font( black , bold , 2em );
 
-/* 
+/*
     Mixin con la Regla @content
     👉 Nos permite introducir múltiples propiedades CSS dentro de un mixin
     👉 Muy usado para Responsive Design
 */
-@mixin desktop(){
-    @media screen and (min-width: 768px) {
-        @content;    
-    }
+@mixin desktop() {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
 }
 
 /* Si usamos un mixin */
-@mixin flexible( $dis , $direction , $cut , $just , $align ){
-    display         : $dis;
-    flex-flow       : $direction $cut;
-    justify-content : $just;
-    align-items     : $align;
+@mixin flexible($direction , $cut , $just , $align ) {
+  display: flex;
+  flex-flow: $direction $cut;
+  justify-content: $just;
+  align-items: $align;
 }
 
 /* Y con Mixin */
-@mixin grid( $columnas , $espacio){
-    display                 : grid;
-    grid-template-columns   : repeat( $columnas , 1fr );
-    gap                     : $espacio;
+@mixin grid( $columnas , $espacio) {
+  display: grid;
+  grid-template-columns: repeat($columnas, 1fr);
+  gap: $espacio;
 
-    @media screen and (min-width:768px) {
-        grid-template-columns : 1fr ;
-        gap : 0em;
-    }
+  @media screen and (min-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
 }
 
 /* Mixin para Responsive Design */

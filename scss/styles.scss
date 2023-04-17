@@ -1,5 +1,5 @@
-@use '_reset';
-@use '_mixins';
+@import '_reset';
+@import '_mixins';
 
 $color: (
   "dark": #272a31,
@@ -7,8 +7,114 @@ $color: (
   "light" : #d3d3d3
 );
 
-.header__social, .header__desktoplinks {
+.header__social,
+.header__desktoplinks {
   display: none;
 }
 
+.headline {
+  padding-top: 100px;
+  margin-left: 2em;
 
+  @include flexible(column, wrap, center, flex-start);
+
+  h2 {
+    @include font( map-get($color, "fresh"), 400 , 1.3em );
+  }
+
+  h1 {
+    @include font(map-get($color, "fresh"), 900, 3rem);
+  }
+
+  &__p {
+    margin-top: 1em;
+    padding: 10px;
+    border: solid 2px #fff;
+    width: 90%;
+  }
+
+  h3 {
+    @include font(map-get($color, "dark"), 900, 1.5em);
+  }
+}
+
+.speakers {
+  @include flexible(column, nowrap, center, center);
+
+  img {
+    float: left;
+    background-color: blue;
+    display: inline;
+    width: 35%;
+    height: 10em;
+    position: relative;
+  }
+
+  &__person--ul {
+    @include flexible(column, nowrap, center, flex-start);
+
+    p {
+      @include font(map-get($color, "fresh"), 400, 0.9rem);
+    }
+
+    span {
+      @include font(map-get($color, "dark"), 400, 0.8rem);
+    }
+  }
+
+  hr {
+    padding: 0 20px;
+    margin-top: -5px;
+  }
+
+  h3 {
+    @include font(map-get($color, "dark"), 700, 1.2rem);
+  }
+}
+
+.program {
+  background-color: map-get($color, "dark");
+  color: map-get($color, 'light');
+
+  @include flexible(column, nowrap, center, center);
+
+  h2 {
+    @include font(map-get($color, "light"), 700, 1.3em);
+
+    margin: 2em 0;
+  }
+
+  > p {
+    display: none;
+  }
+
+  li {
+    @include flexible(row, nowrap, space-around, center);
+
+    background-color: #645d5d41;
+    padding: 2em;
+    width: 90%;
+    margin: 1em 0;
+
+    img {
+      width: 30%;
+    }
+
+    h3 {
+      margin-left: 1em;
+      width: 60%;
+    }
+
+    p {
+      margin-left: 1em;
+      width: 90%;
+    }
+  }
+
+  button {
+    background-color: map-get($color, "fresh");
+    color: map-get($color, "light");
+    padding: 1.5em;
+    margin-bottom: 2em;
+  }
+}
