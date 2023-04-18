@@ -10,21 +10,45 @@ $color: (
 
 .header__social {
   display: none;
+  @include desktop () {
+    @include flexible(row, nowrap, flex-end, center);
+    background-color: map-get($color, "dark");
+    color: map-get($color, "light");
+    padding: 0.6em 0;
+    &--ul {      
+      width: 40%;
+      min-width: 350px;
+      @include flexible(row, nowrap, space-around, center);
+      img {
+        display: inline;
+      }
+    }
+    
+  }
 }
 
-.headline {
+.headline {  
   padding-top: 100px;
   margin-left: 2em;
   padding-bottom: 2em;
+  @include desktop () {
+    padding: 6rem 0;
+  }  
 
   @include flexible(column, wrap, center, center);
 
   h2 {
     @include font( map-get($color, "fresh"), 400 , 1.3em );
+    @include desktop () {
+      @include font( map-get($color, "fresh"), 700 , 1.8em );
+    }
   }
 
   h1 {
     @include font(map-get($color, "fresh"), 900, 3rem);
+    @include desktop () {
+      @include font( map-get($color, "fresh"), 900 , 4em );
+    }
   }
 
   &__description {
@@ -34,11 +58,17 @@ $color: (
     border: solid 2px rgb(179, 178, 178);
     width: 90%;
     background-color: #fff;
+    @include desktop () {
+      width: 60%;
+    }
   }
 
   &__contact {
     text-align: center;
     width: 70%;
+    @include desktop() {
+      padding: 1em 0;
+    }
   }
 }
 
@@ -51,23 +81,25 @@ $color: (
 
   h2 {
     @include font(map-get($color, "dark"), 700, 1.7rem);
-  }
-
-  hr {
-    padding: 0 5%;
-    color: map-get($color, "fresh");
-  }
+  }  
 
   p {
     @include font(map-get($color, "dark"), 400, 1rem);
+    margin-bottom: 2em;
 
     width: 80%;
+    @include desktop() {
+      width: 60%;      
+    }
   }
 
   img {
     width: 90%;
     background-color: #ec5242;
     height: 10em;
+    @include desktop() {
+      width: 50%;
+    }
   }
 }
 
@@ -79,16 +111,21 @@ $color: (
   background-color: #fff;
   padding: 2.5em 0;
 
-  hr {
-    padding: 0 5%;
-    color: map-get($color, "fresh");
+  &__img {
+    width: 100%;
+    margin: 2em 0;
+    @include flexible(column, nowrap, center, center);
+    @include desktop() {
+      @include flexible(row, nowrap, center, center);
+      width: 50%;      
+    }    
   }
 
   img {
     width: 80%;
     background-color: green;
-    margin: 0.4em 0;
-    height: 10em;
+    margin: 0.4em;
+    height: 10em;     
   }
 }
 
@@ -101,11 +138,6 @@ $color: (
   background-color: map-get($color, "dark");
   padding: 2em 1em;
 
-  span {
-    border: solid 2px map-get($color, "fresh");
-    width: 10%;
-    color: map-get($color, "fresh");
-  }
 
   &__img {
     width: 100%;
@@ -114,6 +146,7 @@ $color: (
 
     img {
       width: 30%;
+      max-width: 250px;
       background-color: pink;
       margin: 0.3em;
     }

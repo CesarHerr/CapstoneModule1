@@ -101,9 +101,7 @@ $color: (
       @include font(map-get($color, "fresh"), 400, 0.9rem);
     }
 
-    hr {
-      display: inline;
-      position: relative;
+    hr {      
       padding: 0 10px;
       border-bottom: solid 2px map-get($color, 'light');
       top: -10px;
@@ -126,15 +124,7 @@ $color: (
     @include font(map-get($color, "light"), 700, 1.3em);
 
     margin: 2em 0 1em 0;
-  }
-
-  hr {
-    display: inline;
-    position: relative;
-    padding: 0 1.5em;
-    border-bottom: solid 2px map-get($color, 'fresh');
-    top: -10px;
-  }
+  }  
 
   > a {
     display: none;
@@ -194,5 +184,45 @@ $color: (
     @include desktop () {
       display: none;
     }
+  }
+}
+
+
+.partner {
+  text-align: center;
+
+  @include font(map-get($color, "light"), 400, 1.5rem);
+  @include flexible(column, nowrap, center, center);
+
+  background-color: map-get($color, "dark");
+  padding: 2em 1em; 
+
+  &__img {
+    width: 100%;    
+
+    @include flexible(row, wrap, space-around, center);
+
+    img {
+      width: 30%;
+      max-width: 10em;
+      background-color: pink;
+      margin: 0.3em;
+    }
+  }
+}
+
+.footer {
+  @include flexible(row, nowrap, space-around, center);
+
+  padding: 2em;
+
+  img {
+    width: 30%;
+    background-color: yellow;
+    height: 3rem;
+  }
+
+  p {
+    @include font(map-get($color, "dark"), 400, 0.8rem);
   }
 }
