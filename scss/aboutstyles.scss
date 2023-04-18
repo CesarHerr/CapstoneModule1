@@ -1,0 +1,137 @@
+@import '_reset';
+@import '_mixins';
+
+$color: (
+  "dark": #272a31,
+  "fresh": #ec5242,
+  "light" : #d3d3d3
+);
+
+.header__social,
+.header__desktoplinks {
+  display: none;
+}
+
+.headline {
+  padding-top: 100px;
+  margin-left: 2em;
+  padding-bottom: 2em;
+
+  @include flexible(column, wrap, center, center);
+
+  h2 {
+    @include font( map-get($color, "fresh"), 400 , 1.3em );
+  }
+
+  h1 {
+    @include font(map-get($color, "fresh"), 900, 3rem);
+  }
+
+  &__description {
+    text-align: center;
+    margin-top: 1em;
+    padding: 20px;
+    border: solid 2px rgb(179, 178, 178);
+    width: 90%;
+    background-color: #fff;
+  }
+
+  &__contact {
+    text-align: center;
+    width: 70%;
+  }
+}
+
+.logo {
+  @include flexible(column, nowrap, center, center);
+
+  text-align: center;
+  background-color: #fff;
+  padding: 4em 0;
+
+  h2 {
+    @include font(map-get($color, "dark"), 700, 1.7rem);
+  }
+
+  hr {
+    padding: 0 5%;
+    color: map-get($color, "fresh");
+  }
+
+  p {
+    @include font(map-get($color, "dark"), 400, 1rem);
+
+    width: 80%;
+  }
+
+  img {
+    width: 90%;
+    background-color: #ec5242;
+    height: 10em;
+  }
+}
+
+.seethepast {
+  @include flexible(column, nowrap, center, center);
+
+  text-align: center;
+  border-top: solid 1px rgb(179, 178, 178);
+  background-color: #fff;
+  padding: 2.5em 0;
+
+  hr {
+    padding: 0 5%;
+    color: map-get($color, "fresh");
+  }
+
+  img {
+    width: 80%;
+    background-color: green;
+    margin: 0.4em 0;
+    height: 10em;
+  }
+}
+
+.partner {
+  text-align: center;
+
+  @include font(map-get($color, "light"), 400, 1.5rem);
+  @include flexible(column, nowrap, center, center);
+
+  background-color: map-get($color, "dark");
+  padding: 2em 1em;
+
+  span {
+    border: solid 2px map-get($color, "fresh");
+    width: 10%;
+    color: map-get($color, "fresh");
+  }
+
+  &__img {
+    width: 100%;
+
+    @include flexible(row, wrap, space-around, center);
+
+    img {
+      width: 30%;
+      background-color: pink;
+      margin: 0.3em;
+    }
+  }
+}
+
+.footer {
+  @include flexible(row, nowrap, space-around, center);
+
+  padding: 2em;
+
+  img {
+    width: 30%;
+    background-color: yellow;
+    height: 3rem;
+  }
+
+  p {
+    @include font(map-get($color, "dark"), 400, 0.8rem);
+  }
+}
