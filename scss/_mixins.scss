@@ -10,6 +10,12 @@
   }
 }
 
+@mixin mobile() {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
 @mixin flexible($direction , $cut , $just , $align ) {
   display: flex;
   flex-flow: $direction $cut;

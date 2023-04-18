@@ -10,20 +10,44 @@ $color: (
 
 .header__social {
   display: none;
+  @include desktop () {
+    @include flexible(row, nowrap, flex-end, center);
+    background-color: map-get($color, "dark");
+    color: map-get($color, "light");
+    padding: 0.6em 0;
+    &--ul {      
+      width: 40%;
+      min-width: 350px;
+      @include flexible(row, nowrap, space-around, center);
+      img {
+        display: inline;
+      }
+    }
+    
+  }
 }
 
 .headline {
   padding: 100px 0;
   margin-left: 2em;
+  @include desktop() {
+    padding: 5em 8em;
+  }
 
   @include flexible(column, wrap, center, flex-start);
 
   h2 {
     @include font( map-get($color, "fresh"), 400 , 1.3em );
+    @include desktop () {
+      @include font( map-get($color, "fresh"), 700 , 1.7em );
+    } 
   }
 
   h1 {
     @include font(map-get($color, "fresh"), 900, 3rem);
+    @include desktop () {
+      @include font( map-get($color, "fresh"), 900 , 4em );
+    } 
   }
 
   &__p {
@@ -31,12 +55,15 @@ $color: (
     padding: 10px;
     border: solid 2px #fff;
     width: 90%;
+    @include desktop () {
+      width: 50%
+    } 
   }
 
   h3 {
-    @include font(map-get($color, "dark"), 900, 1.5em);
-
-    margin-top: 0.5em;
+    margin: 0.7em 0;
+    @include font(map-get($color, "dark"), 900, 1.8em);
+    
   }
 }
 
@@ -109,17 +136,34 @@ $color: (
     top: -10px;
   }
 
-  > p {
+  > a {
     display: none;
+    @include desktop() {
+      display: inline;
+      margin: 0 0 5em 0;      
+    }
+  }
+
+  ul {
+    @include desktop () {
+      padding: 3em 0;
+      @include flexible(row, wrap, center, center);
+    }
   }
 
   li {
     @include flexible(row, nowrap, space-around, center);
 
     background-color: #645d5d41;
-    padding: 2em;
-    width: 90%;
+    padding: 2em 0;
+    width: 95%;
     margin: 1em 0;
+
+    @include desktop () {
+      @include flexible(column, nowrap, space-around, center);      
+      margin: 1.5em 1em;
+      width: 15%;
+    }
 
     img {
       width: 30%;
@@ -140,10 +184,15 @@ $color: (
     }
   }
 
+
+
   button {
     background-color: map-get($color, "fresh");
     color: map-get($color, "light");
     padding: 1.5em;
     margin-bottom: 2em;
+    @include desktop () {
+      display: none;
+    }
   }
 }
