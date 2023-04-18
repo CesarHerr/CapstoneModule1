@@ -1,5 +1,3 @@
-@charset "UTF-8";
-
 *,
 *::before,
 *::after {
@@ -15,12 +13,10 @@
   display: block;
 }
 
-/* (Opcional) Configuramos anclas suaves */
 html {
   scroll-behavior: smooth;
 }
 
-/* Configuramos la tipografía para toda la web */
 body {
   background-color: #d3d3d3;
   min-height: 100vh;
@@ -29,14 +25,12 @@ body {
   color: #272a31;
 }
 
-/* Evitamos problemas con las imagenes */
 img {
   max-width: 100%;
   width: 100%;
   display: block;
 }
 
-/* Reseteamos los enlaces para funcionar como cajas... */
 a {
   display: block;
   text-decoration: none;
@@ -44,12 +38,10 @@ a {
   font-size: inherit;
 }
 
-/* Quitamos los puntos de los <li> */
 li {
   list-style-type: none;
 }
 
-/* Desactivamos estilos por defecto de las principales etiquetas de texto */
 h1,
 h2,
 h3,
@@ -61,31 +53,87 @@ a {
   color: inherit;
 }
 
-/* Evitamos problemas con los SVG */
-svg {
+.header__links {
+  position: fixed;
   width: 100%;
-  display: block;
-  fill: currentColor;
+  background-color: #d3d3d3;
+  z-index: 10;
 }
 
-/*
-    Mixin con la Regla @content
-    👉 Nos permite introducir múltiples propiedades CSS dentro de un mixin
-    👉 Muy usado para Responsive Design
-*/
+.header__links .hamburger-open {
+  width: 60px;
+  background: none;
+}
 
-/* Si usamos un mixin */
+.header__links .show-icon {
+  display: none;
+}
 
-/* Y con Mixin */
+.header__links--menu {
+  position: fixed;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  color: #272a31;
+  font-weight: 900;
+  font-size: 3rem;
+  padding: 2em 0;
+  width: 100%;
+  margin-top: 0;
+  transform: translate3d(0, -120%, 0);
+  transition: transform 0.6s ease-in-out;
+  background-color: #d3d3d3;
+}
 
-/* Mixin para Responsive Design */
-.header__social,
-.header__desktoplinks {
+.header__links--menu .hamburger-close {
+  display: none;
+}
+
+.header__links--menu .close {
+  display: block;
+  position: absolute;
+  background: none;
+  border: none;
+  right: 20px;
+  top: 20px;
+}
+
+.program li {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(100, 93, 93, 0.2549019608);
+  padding: 2em;
+  width: 90%;
+  margin: 1em 0;
+}
+
+.header__links .show {
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.5s ease-in-out;
+}
+
+.header__links .show li {
+  width: 100%;
+  border-bottom: solid 1px #6f6c6b;
+  padding: 1rem;
+}
+
+.header__links .show li:hover {
+  padding: 2rem;
+  background-color: rgba(81, 80, 80, 0.371);
+  transition: all 0.3s ease-in-out;
+  box-shadow: -3.8px -3.8px 3.6px rgba(0, 0, 0, 0.15), -27.8px -27.8px 10px rgba(0, 0, 0, 0.147), -67.5px -67.5px 24.1px rgba(0, 0, 0, 0.101), 500px 500px 80px rgba(0, 0, 0, 0.03);
+}
+
+.header__social {
   display: none;
 }
 
 .headline {
-  padding-top: 100px;
+  padding: 100px 0;
   margin-left: 2em;
   display: flex;
   flex-flow: column wrap;
@@ -113,24 +161,35 @@ svg {
 }
 
 .headline h3 {
-  color: #272a31;
+  color: #312827;
   font-weight: 900;
   font-size: 1.5em;
+  margin-top: 0.5em;
 }
 
 .speakers {
+  margin-top: 20px;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+  background-color: #fff;
+}
+
+.speakers h2 {
+  color: #312827;
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-bottom: 1em;
 }
 
 .speakers img {
   float: left;
+  margin: 10px;
   background-color: blue;
   display: inline;
-  width: 35%;
-  height: 10em;
+  width: 25%;
+  height: 8em;
   position: relative;
 }
 
@@ -141,32 +200,36 @@ svg {
   align-items: flex-start;
 }
 
+.speakers__person--ul h3 {
+  color: #312827;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
 .speakers__person--ul p {
   color: #ec5242;
   font-weight: 400;
   font-size: 0.9rem;
 }
 
-.speakers__person--ul span {
-  color: #272a31;
+.speakers__person--ul hr {
+  display: inline;
+  position: relative;
+  padding: 0 10px;
+  border-bottom: solid 2px #d3d3d3;
+  top: -10px;
+}
+
+.speakers__person--ul .speakers__person--description {
+  color: #312827;
   font-weight: 400;
   font-size: 0.8rem;
 }
 
-.speakers hr {
-  padding: 0 20px;
-  margin-top: -5px;
-}
-
-.speakers h3 {
-  color: #272a31;
-  font-weight: 700;
-  font-size: 1.2rem;
-}
-
 .program {
-  background-color: #272a31;
+  background-color: #312827;
   color: #d3d3d3;
+  padding-left: 2em;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -177,36 +240,43 @@ svg {
   color: #d3d3d3;
   font-weight: 700;
   font-size: 1.3em;
-  margin: 2em 0;
+  margin: 2em 0 1em 0;
+}
+
+.program hr {
+  display: inline;
+  position: relative;
+  padding: 0 1.5em;
+  border-bottom: solid 2px #ec5242;
+  top: -10px;
 }
 
 .program > p {
   display: none;
 }
 
-.program li {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-around;
-  align-items: center;
-  background-color: rgba(100, 93, 93, 0.2549019608);
-  padding: 2em;
-  width: 90%;
-  margin: 1em 0;
-}
-
 .program li img {
   width: 30%;
+}
+
+.header__links--menu .close img {
+  width: 20px;
 }
 
 .program li h3 {
   margin-left: 1em;
   width: 60%;
+  color: #ec5242;
+  font-weight: 700;
+  font-size: 1.2rem;
 }
 
 .program li p {
   margin-left: 1em;
   width: 90%;
+  color: #d3d3d3;
+  font-weight: 400;
+  font-size: 0.8rem;
 }
 
 .program button {

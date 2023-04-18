@@ -1,23 +1,15 @@
-@mixin font( $argumento1:red , $argumento2 , $argumento3 : 1rem) {
+@mixin font($argumento1 , $argumento2 , $argumento3) {
   color: $argumento1;
   font-weight: $argumento2;
   font-size: $argumento3;
 }
 
-//    @include font( black , bold , 2em );
-
-/*
-    Mixin con la Regla @content
-    👉 Nos permite introducir múltiples propiedades CSS dentro de un mixin
-    👉 Muy usado para Responsive Design
-*/
 @mixin desktop() {
   @media screen and (min-width: 768px) {
     @content;
   }
 }
 
-/* Si usamos un mixin */
 @mixin flexible($direction , $cut , $just , $align ) {
   display: flex;
   flex-flow: $direction $cut;
@@ -25,27 +17,13 @@
   align-items: $align;
 }
 
-/* Y con Mixin */
-@mixin grid( $columnas , $espacio) {
+@mixin grid( $columns , $space) {
   display: grid;
-  grid-template-columns: repeat($columnas, 1fr);
-  gap: $espacio;
+  grid-template-columns: repeat($columns, 1fr);
+  gap: $space;
 
   @media screen and (min-width: 768px) {
     grid-template-columns: 1fr;
     gap: 0;
   }
 }
-
-/* Mixin para Responsive Design */
-// @mixin mv( $medida : 480px ){
-//     @media screen and (max-width: $medida ) {
-//         @content;
-//     }
-// }
-
-// article{
-//     width:25%;
-//     @include mv(768px){ width:50% }
-//     @include mv(){ width:100% }
-// }

@@ -1,5 +1,6 @@
 @import '_reset';
 @import '_mixins';
+@import '_hamburger';
 
 $color: (
   "dark": #272a31,
@@ -7,8 +8,7 @@ $color: (
   "light" : #d3d3d3
 );
 
-.header__social,
-.header__desktoplinks {
+.header__social {
   display: none;
 }
 

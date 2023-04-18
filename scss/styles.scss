@@ -1,19 +1,19 @@
 @import '_reset';
 @import '_mixins';
+@import '_hamburger';
 
 $color: (
-  "dark": #272a31,
+  "dark": #312827,
   "fresh": #ec5242,
   "light" : #d3d3d3
 );
 
-.header__social,
-.header__desktoplinks {
+.header__social {
   display: none;
 }
 
 .headline {
-  padding-top: 100px;
+  padding: 100px 0;
   margin-left: 2em;
 
   @include flexible(column, wrap, center, flex-start);
@@ -35,53 +35,78 @@ $color: (
 
   h3 {
     @include font(map-get($color, "dark"), 900, 1.5em);
+
+    margin-top: 0.5em;
   }
 }
 
 .speakers {
+  margin-top: 20px;
+
   @include flexible(column, nowrap, center, center);
+
+  background-color: #fff;
+
+  h2 {
+    @include font(map-get($color, "dark"), 700, 1.4rem);
+
+    margin-bottom: 1em;
+  }
 
   img {
     float: left;
+    margin: 10px;
     background-color: blue;
     display: inline;
-    width: 35%;
-    height: 10em;
+    width: 25%;
+    height: 8em;
     position: relative;
   }
 
   &__person--ul {
     @include flexible(column, nowrap, center, flex-start);
 
+    h3 {
+      @include font(map-get($color, "dark"), 700, 1.2rem);
+    }
+
     p {
       @include font(map-get($color, "fresh"), 400, 0.9rem);
     }
 
-    span {
+    hr {
+      display: inline;
+      position: relative;
+      padding: 0 10px;
+      border-bottom: solid 2px map-get($color, 'light');
+      top: -10px;
+    }
+
+    .speakers__person--description {
       @include font(map-get($color, "dark"), 400, 0.8rem);
     }
-  }
-
-  hr {
-    padding: 0 20px;
-    margin-top: -5px;
-  }
-
-  h3 {
-    @include font(map-get($color, "dark"), 700, 1.2rem);
   }
 }
 
 .program {
   background-color: map-get($color, "dark");
   color: map-get($color, 'light');
+  padding-left: 2em;
 
   @include flexible(column, nowrap, center, center);
 
   h2 {
     @include font(map-get($color, "light"), 700, 1.3em);
 
-    margin: 2em 0;
+    margin: 2em 0 1em 0;
+  }
+
+  hr {
+    display: inline;
+    position: relative;
+    padding: 0 1.5em;
+    border-bottom: solid 2px map-get($color, 'fresh');
+    top: -10px;
   }
 
   > p {
@@ -103,11 +128,15 @@ $color: (
     h3 {
       margin-left: 1em;
       width: 60%;
+
+      @include font(map-get($color, 'fresh'), 700, 1.2rem);
     }
 
     p {
       margin-left: 1em;
       width: 90%;
+
+      @include font(map-get($color, 'light'), 400, 0.8rem);
     }
   }
 

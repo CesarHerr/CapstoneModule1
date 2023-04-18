@@ -13,12 +13,10 @@
   display: block;
 }
 
-/* (Opcional) Configuramos anclas suaves */
 html {
   scroll-behavior: smooth;
 }
 
-/* Configuramos la tipografía para toda la web */
 body {
   background-color: #d3d3d3;
   min-height: 100vh;
@@ -27,14 +25,12 @@ body {
   color: #272a31;
 }
 
-/* Evitamos problemas con las imagenes */
 img {
   max-width: 100%;
   width: 100%;
   display: block;
 }
 
-/* Reseteamos los enlaces para funcionar como cajas... */
 a {
   display: block;
   text-decoration: none;
@@ -42,12 +38,10 @@ a {
   font-size: inherit;
 }
 
-/* Quitamos los puntos de los <li> */
 li {
   list-style-type: none;
 }
 
-/* Desactivamos estilos por defecto de las principales etiquetas de texto */
 h1,
 h2,
 h3,
@@ -57,11 +51,4 @@ a {
   font-style: inherit;
   text-decoration: none;
   color: inherit;
-}
-
-/* Evitamos problemas con los SVG */
-svg {
-  width: 100%;
-  display: block;
-  fill: currentColor;
 }
