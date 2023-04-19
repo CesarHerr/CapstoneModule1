@@ -28,8 +28,8 @@
   grid-template-columns: repeat($columns, 1fr);
   gap: $space;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (max-width: 768px) {
     grid-template-columns: 1fr;
-    gap: 0;
+    gap: 0;    
   }
 }

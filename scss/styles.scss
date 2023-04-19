@@ -68,11 +68,18 @@ $color: (
 }
 
 .speakers {
-  margin-top: 20px;
-
-  @include flexible(column, nowrap, center, center);
-
+  padding-top: 20px;
   background-color: #fff;
+  width: 100%;
+  margin: 0 auto;
+  @include flexible(column, nowrap, center, center);   
+
+  > .speakersCreated {
+    @include grid(2, 10px); 
+    @include desktop() { 
+      padding: 2em 0;
+    }  
+  }
 
   h2 {
     @include font(map-get($color, "dark"), 700, 1.4rem);
@@ -90,8 +97,18 @@ $color: (
     position: relative;
   }
 
+  &__person {
+    background-color: yellow;
+    @include desktop() {
+      width: 90%;
+      background-color: green;      
+      padding: 2em 0
+    }
+  }
+
   &__person--ul {
-    @include flexible(column, nowrap, center, flex-start);
+    margin-top: .5em;  
+    @include flexible(column, nowrap, center, flex-start);    
 
     h3 {
       @include font(map-get($color, "dark"), 700, 1.2rem);
@@ -174,8 +191,6 @@ $color: (
     }
   }
 
-
-
   button {
     background-color: map-get($color, "fresh");
     color: map-get($color, "light");
@@ -186,7 +201,6 @@ $color: (
     }
   }
 }
-
 
 .partner {
   text-align: center;
@@ -226,3 +240,17 @@ $color: (
     @include font(map-get($color, "dark"), 400, 0.8rem);
   }
 }
+
+.morebutton {
+  width: 100%;
+  @include font(map-get($color, "dark"), 900, 1.5rem);
+  @include desktop() {
+    display: none;
+  }
+ }
+
+.hidden {
+  @include mobile(){
+    display: none;
+  }  
+} 

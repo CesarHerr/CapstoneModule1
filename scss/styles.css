@@ -273,12 +273,30 @@ a {
 }
 
 .speakers {
-  margin-top: 20px;
+  padding-top: 20px;
+  background-color: #fff;
+  width: 100%;
+  margin: 0 auto;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  background-color: #fff;
+}
+.speakers > .speakersCreated {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+@media screen and (max-width: 768px) {
+  .speakers > .speakersCreated {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .speakers > .speakersCreated {
+    padding: 2em 0;
+  }
 }
 .speakers h2 {
   color: #312827;
@@ -295,7 +313,18 @@ a {
   height: 8em;
   position: relative;
 }
+.speakers__person {
+  background-color: yellow;
+}
+@media screen and (min-width: 768px) {
+  .speakers__person {
+    width: 90%;
+    background-color: green;
+    padding: 2em 0;
+  }
+}
 .speakers__person--ul {
+  margin-top: 0.5em;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -446,4 +475,22 @@ a {
   color: #312827;
   font-weight: 400;
   font-size: 0.8rem;
+}
+
+.morebutton {
+  width: 100%;
+  color: #312827;
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+@media screen and (min-width: 768px) {
+  .morebutton {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hidden {
+    display: none;
+  }
 }/*# sourceMappingURL=styles.css.map */
