@@ -2,47 +2,47 @@ const objectWorks = [
   {
     id: 'speaker1',
     title: 'Name 1',      
-    img: '#',      
+    img: 'img/speaker1_.jpg',      
     subtitle: 'Lorem ipsum dolor sit amet consectetur adipiscing, elit at a cursus.',
     description2: 'Lorem ipsum dolor sit amet consectetur adipiscing, elit at a cursus.',
     class: ''
   },
   {
-    id: 'speaker1',
+    id: 'speaker2',
     title: 'Name 1',      
-    img: '#',      
+    img: 'img/speaker2_.jpg',      
     subtitle: 'Lorem ipsum dolor sit amet consectetur adipiscing, elit at a cursus.',
     description2: 'Lorem ipsum dolor sit amet consectetur adipiscing, elit at a cursus.',
     class: ''
   },
   {
-    id: 'speaker1',
+    id: 'speaker3',
     title: 'Name 1',      
-    img: '#',      
+    img: 'img/speaker3_.jpg',      
     subtitle: 'Lorem ipsum dolor sit amet consectetur adipiscing, elit at a cursus.',
     description2: 'Lorem ipsum dolor sit amet consectetur adipiscing, elit at a cursus.',
     class: 'hidden'
   },
   {
-    id: 'speaker1',
+    id: 'speaker4',
     title: 'Name 1',      
-    img: '#',      
+    img: 'img/speaker4_.jpg',      
     subtitle: 'Lorem ipsum dolor sit amet consectetur adipiscing, elit at a cursus.',
     description2: 'Lorem ipsum dolor sit amet consectetur adipiscing, elit at a cursus.',
     class: 'hidden'
   },
   {
-    id: 'speaker1',
+    id: 'speaker5',
     title: 'Name 1',      
-    img: '#',      
+    img: 'img/speaker5_.jpg',      
     subtitle: 'Lorem ipsum dolor sit amet consectetur adipiscing, elit at a cursus.',
     description2: 'Lorem ipsum dolor sit amet consectetur adipiscing, elit at a cursus.',
     class: 'hidden'
   },
   {
-    id: 'speaker1',
+    id: 'speaker6',
     title: 'Name 1',      
-    img: '#',      
+    img: 'img/speaker6_.jpg',      
     subtitle: 'Lorem ipsum dolor sit amet consectetur adipiscing, elit at a cursus.',
     description2: 'Lorem ipsum dolor sit amet consectetur adipiscing, elit at a cursus.',
     class: 'hidden'

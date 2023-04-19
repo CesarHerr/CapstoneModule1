@@ -7,13 +7,14 @@ $color: (
 .header__links {
   position: fixed;
   width: 100%;
-  background-color: map-get($color,"light");
+  background-color: #d3d3d3d8; 
   z-index: 10;
   @include desktop (){    
     @include flexible(row, nowrap, flex-end, center);
     position: relative;
-    background-color: #fff;
-  }
+    background-color: #fffffff0;    
+  } 
+
   .hamburger-open {
     width: 60px;
     background: none;
@@ -37,6 +38,7 @@ $color: (
       display: inline;      
       position: absolute;
       left: 8em;
+      width: 100px;
     }
   }
 
@@ -54,17 +56,30 @@ $color: (
   }
 
   &--menu {
-    position: fixed;
-
-    @include flexible(column, nowrap, center, flex-start);
-    @include font(#272a31, 900, 3rem);
-
+    position: fixed;  
     padding: 2em 0;
     width: 100%;
     margin-top: 0;
     transform: translate3d(0, -120%, 0);
     transition: transform 0.6s ease-in-out;
-    background-color: map-get($color,"light");
+    background-color:#8f615cf9;
+    @include flexible(column, nowrap, center, flex-start);
+    @include font(#272a31, 900, 2rem);
+
+    .navbar_logo {
+      display:inline;
+      top: 50px;
+      &:hover {
+        width: 6em;
+        box-shadow:
+            -3.8px -3.8px 3.6px rgba(0, 0, 0, 0.15),
+            -27.8px -27.8px 10px rgba(0, 0, 0, 0.147),
+            -67.5px -67.5px 24.1px rgba(0, 0, 0, 0.101),
+            500px 500px 80px rgba(0, 0, 0, 0.03);
+        transition: all .3s ease-in-out;    
+      }
+    }
+
     @include desktop () {
       position: relative;      
       transform: none;
@@ -72,8 +87,11 @@ $color: (
       @include flexible(row, nowrap, space-around, center);
       width: 50%;
       min-width: 400px;
-      background-color: #fff;
+      background-color: #ffffff6c;
       margin-right: 4em;
+      .navbar_logo {
+        display: none;
+      }
       a:hover {
         color: map-get($color,"fresh");
         font-weight: 900;
@@ -104,7 +122,8 @@ $color: (
   .show {
     @include mobile() { 
       transform: translate3d(0, 0, 0);
-      transition: transform 0.5s ease-in-out;    
+      transition: transform 0.5s ease-in-out;         
+      height: 100vh;
 
       li {
         width: 100%;

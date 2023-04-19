@@ -18,7 +18,12 @@ html {
 }
 
 body {
-  background-color: #d3d3d3;
+  
+  background-image: url(../img/araucaria.jpg);
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-blend-mode: lighten;
+  
   min-height: 100vh;
   font-size: 100%;
   font-family: 'Lato', sans-serif;

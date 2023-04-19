@@ -15,12 +15,17 @@ $color: (
     background-color: map-get($color, "dark");
     color: map-get($color, "light");
     padding: 0.6em 0;
-    &--ul {      
+    &--ul {            
       width: 40%;
       min-width: 350px;
-      @include flexible(row, nowrap, space-around, center);
+      @include flexible(row, nowrap, space-around, center);    
       img {
+        width: 20px;  
+        margin-left: 1em;    
         display: inline;
+      }  
+      .facebook {
+        width: 15px;
       }
     }
     
@@ -28,10 +33,11 @@ $color: (
 }
 
 .headline {
-  padding: 100px 0;
-  margin-left: 2em;
+  padding: 100px 2em;    
+  background-color: #d3d3d3d8;
   @include desktop() {
-    padding: 5em 8em;
+    margin: 0;
+    padding: 5em 8em;    
   }
 
   @include flexible(column, wrap, center, flex-start);
@@ -46,17 +52,25 @@ $color: (
   h1 {
     @include font(map-get($color, "fresh"), 900, 3rem);
     @include desktop () {
-      @include font( map-get($color, "fresh"), 900 , 4em );
+      @include font( #ec5342b0, 900 , 4em );      
+      background-image: url(../img/araucaria.jpg);
+      background-size:contain;
+      background-repeat: repeat;
+      background-clip: text;
     } 
   }
 
   &__p {
     margin-top: 1em;
     padding: 10px;
-    border: solid 2px #fff;
+    border: double 3px #fff;
+    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.15);
+    border-top-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
     width: 90%;
     @include desktop () {
-      width: 50%
+      width: 50%;
+      background-color: #ffffff94;
     } 
   }
 
@@ -69,7 +83,7 @@ $color: (
 
 .speakers {
   padding-top: 20px;
-  background-color: #fff;
+  background-color: #d3d3d3d8; 
   width: 100%;
   margin: 0 auto;
   @include flexible(column, nowrap, center, center);   
@@ -89,19 +103,26 @@ $color: (
 
   img {
     float: left;
-    margin: 10px;
-    background-color: blue;
+    margin: 10px;    
     display: inline;
     width: 25%;
     height: 8em;
     position: relative;
+    object-fit:fill;
+    border-radius: .5rem 10rem .5rem 10rem;
+    border: solid 2px map-get($color,"dark");
+    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.15);
   }
 
-  &__person {
-    background-color: yellow;
+  &__person {    
+    border: solid 1px gray;
+    border-radius: 0 3rem 0 3rem;
+    width: 90%;
+    margin: .5em auto;    
+    background-color: #ffffff79;
+    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.15);
     @include desktop() {
-      width: 90%;
-      background-color: green;      
+      width: 90%;          
       padding: 2em 0
     }
   }
@@ -120,7 +141,7 @@ $color: (
 
     hr {      
       padding: 0 10px;
-      border-bottom: solid 2px map-get($color, 'light');
+      border-bottom: solid 2px map-get($color, 'dark');
       top: -10px;
     }
 
@@ -131,7 +152,7 @@ $color: (
 }
 
 .program {
-  background-color: map-get($color, "dark");
+  background-color: #312827f5;
   color: map-get($color, 'light');
   padding-left: 2em;
 
@@ -151,10 +172,12 @@ $color: (
     }
   }
 
-  ul {
+  &__ul {
     @include desktop () {
-      padding: 3em 0;
-      @include flexible(row, wrap, center, center);
+      padding: 3em 0;     
+      text-align: center;      
+      
+      @include flexible(row, wrap, center, center);           
     }
   }
 
@@ -162,7 +185,9 @@ $color: (
     @include flexible(row, nowrap, space-around, center);
 
     background-color: #645d5d41;
-    padding: 2em 0;
+    border-top-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    padding: 1em;
     width: 95%;
     margin: 1em 0;
 
@@ -170,24 +195,32 @@ $color: (
       @include flexible(column, nowrap, space-around, center);      
       margin: 1.5em 1em;
       width: 15%;
+      min-width: 200px;
     }
 
     img {
-      width: 30%;
+      width: 20%;
+      @include desktop() {
+      width: 40%;
+      }
     }
 
     h3 {
       margin-left: 1em;
       width: 60%;
+      @include desktop() {
+        width: 100%;
+        padding: .5em 0;
+      }
 
       @include font(map-get($color, 'fresh'), 700, 1.2rem);
     }
 
     p {
-      margin-left: 1em;
-      width: 90%;
+      margin: 1em;
+      width: 100%;     
 
-      @include font(map-get($color, 'light'), 400, 0.8rem);
+      @include font(map-get($color, 'light'), 400, 0.8rem);      
     }
   }
 
@@ -208,7 +241,7 @@ $color: (
   @include font(map-get($color, "light"), 400, 1.5rem);
   @include flexible(column, nowrap, center, center);
 
-  background-color: map-get($color, "dark");
+  background-color: #312827d5;
   padding: 2em 1em; 
 
   &__img {
@@ -217,23 +250,26 @@ $color: (
     @include flexible(row, wrap, space-around, center);
 
     img {
-      width: 30%;
-      max-width: 10em;
-      background-color: pink;
+      width: 15%;
+      max-width: 10em;      
       margin: 0.3em;
     }
   }
 }
 
 .footer {
-  @include flexible(row, nowrap, space-around, center);
-
   padding: 2em;
+  background-color: #d3d3d3d8;
+  @include flexible(row, nowrap, center, center);
+  @include desktop() {    
+    padding: 0;
+  }
 
   img {
-    width: 30%;
-    background-color: yellow;
-    height: 3rem;
+    width: 30%;        
+    @include desktop() {
+      width: 20%;
+    }
   }
 
   p {

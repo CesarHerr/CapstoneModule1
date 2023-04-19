@@ -20,7 +20,12 @@ $color: (
       min-width: 350px;
       @include flexible(row, nowrap, space-around, center);
       img {
+        width: 20px;  
+        margin-left: 1em;    
         display: inline;
+      }  
+      .facebook {
+        width: 15px;
       }
     }
     
@@ -31,8 +36,10 @@ $color: (
   padding-top: 100px;
   margin-left: 2em;
   padding-bottom: 2em;
+  background-color: #d3d3d3d8;
   @include desktop () {
     padding: 6rem 0;
+    margin: 0;
   }  
 
   @include flexible(column, wrap, center, center);
@@ -40,27 +47,35 @@ $color: (
   h2 {
     @include font( map-get($color, "fresh"), 400 , 1.3em );
     @include desktop () {
-      @include font( map-get($color, "fresh"), 700 , 1.8em );
+      @include font( map-get($color, "fresh"), 700 , 1.8em );      
     }
   }
 
   h1 {
     @include font(map-get($color, "fresh"), 900, 3rem);
     @include desktop () {
-      @include font( map-get($color, "fresh"), 900 , 4em );
+      @include font(#ec5342b0, 900 , 5em );
+      background-image: url(../img/araucaria.jpg);
+      background-size:contain;
+      background-repeat: repeat;
+      background-clip: text;
     }
   }
 
   &__description {
     text-align: center;
     margin-top: 1em;
-    padding: 20px;
-    border: solid 2px rgb(179, 178, 178);
+    padding: 10px;
+    border: double 3px #fff;
+    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.15);
+    border-top-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
     width: 90%;
-    background-color: #fff;
     @include desktop () {
-      width: 60%;
-    }
+      width: 50%;
+      background-color: #ffffff94;
+      
+    } 
   }
 
   &__contact {
@@ -135,33 +150,35 @@ $color: (
   @include font(map-get($color, "light"), 400, 1.5rem);
   @include flexible(column, nowrap, center, center);
 
-  background-color: map-get($color, "dark");
-  padding: 2em 1em;
-
+  background-color: #312827d5;
+  padding: 2em 1em; 
 
   &__img {
-    width: 100%;
+    width: 100%;    
 
     @include flexible(row, wrap, space-around, center);
 
     img {
-      width: 30%;
-      max-width: 250px;
-      background-color: pink;
+      width: 15%;
+      max-width: 10em;      
       margin: 0.3em;
     }
   }
 }
 
 .footer {
-  @include flexible(row, nowrap, space-around, center);
-
   padding: 2em;
+  background-color: #d3d3d3d8;
+  @include flexible(row, nowrap, center, center);
+  @include desktop() {    
+    padding: 0;
+  }
 
   img {
-    width: 30%;
-    background-color: yellow;
-    height: 3rem;
+    width: 30%;        
+    @include desktop() {
+      width: 20%;
+    }
   }
 
   p {

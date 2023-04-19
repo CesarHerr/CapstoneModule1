@@ -18,7 +18,10 @@ html {
 }
 
 body {
-  background-color: #d3d3d3;
+  background-image: url(../img/araucaria.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: lighten;
   min-height: 100vh;
   font-size: 100%;
   font-family: "Lato", sans-serif;
@@ -64,7 +67,7 @@ a {
 .header__links {
   position: fixed;
   width: 100%;
-  background-color: #d3d3d3;
+  background-color: rgba(211, 211, 211, 0.8470588235);
   z-index: 10;
 }
 @media screen and (min-width: 768px) {
@@ -74,7 +77,7 @@ a {
     justify-content: flex-end;
     align-items: center;
     position: relative;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.9411764706);
   }
 }
 .header__links .hamburger-open {
@@ -102,6 +105,7 @@ a {
     display: inline;
     position: absolute;
     left: 8em;
+    width: 100px;
   }
 }
 .header__links .visible {
@@ -119,19 +123,28 @@ a {
 }
 .header__links--menu {
   position: fixed;
+  padding: 2em 0;
+  width: 100%;
+  margin-top: 0;
+  transform: translate3d(0, -120%, 0);
+  transition: transform 0.6s ease-in-out;
+  background-color: rgba(143, 97, 92, 0.9764705882);
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: flex-start;
   color: #272a31;
   font-weight: 900;
-  font-size: 3rem;
-  padding: 2em 0;
-  width: 100%;
-  margin-top: 0;
-  transform: translate3d(0, -120%, 0);
-  transition: transform 0.6s ease-in-out;
-  background-color: #d3d3d3;
+  font-size: 2rem;
+}
+.header__links--menu .navbar_logo {
+  display: inline;
+  top: 50px;
+}
+.header__links--menu .navbar_logo:hover {
+  width: 6em;
+  box-shadow: -3.8px -3.8px 3.6px rgba(0, 0, 0, 0.15), -27.8px -27.8px 10px rgba(0, 0, 0, 0.147), -67.5px -67.5px 24.1px rgba(0, 0, 0, 0.101), 500px 500px 80px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease-in-out;
 }
 @media screen and (min-width: 768px) {
   .header__links--menu {
@@ -146,8 +159,11 @@ a {
     align-items: center;
     width: 50%;
     min-width: 400px;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.4235294118);
     margin-right: 4em;
+  }
+  .header__links--menu .navbar_logo {
+    display: none;
   }
   .header__links--menu a:hover {
     color: #ec5242;
@@ -177,6 +193,7 @@ a {
   .header__links .show {
     transform: translate3d(0, 0, 0);
     transition: transform 0.5s ease-in-out;
+    height: 100vh;
   }
   .header__links .show li {
     width: 100%;
@@ -213,13 +230,18 @@ a {
     align-items: center;
   }
   .header__social--ul img {
+    width: 20px;
+    margin-left: 1em;
     display: inline;
+  }
+  .header__social--ul .facebook {
+    width: 15px;
   }
 }
 
 .headline {
-  padding: 100px 0;
-  margin-left: 2em;
+  padding: 100px 2em;
+  background-color: rgba(211, 211, 211, 0.8470588235);
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
@@ -227,6 +249,7 @@ a {
 }
 @media screen and (min-width: 768px) {
   .headline {
+    margin: 0;
     padding: 5em 8em;
   }
 }
@@ -249,20 +272,29 @@ a {
 }
 @media screen and (min-width: 768px) {
   .headline h1 {
-    color: #ec5242;
+    color: rgba(236, 83, 66, 0.6901960784);
     font-weight: 900;
     font-size: 4em;
+    background-image: url(../img/araucaria.jpg);
+    background-size: contain;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+            background-clip: text;
   }
 }
 .headline__p {
   margin-top: 1em;
   padding: 10px;
-  border: solid 2px #fff;
+  border: double 3px #fff;
+  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.15);
+  border-top-right-radius: 2rem;
+  border-bottom-left-radius: 2rem;
   width: 90%;
 }
 @media screen and (min-width: 768px) {
   .headline__p {
     width: 50%;
+    background-color: rgba(255, 255, 255, 0.5803921569);
   }
 }
 .headline h3 {
@@ -274,7 +306,7 @@ a {
 
 .speakers {
   padding-top: 20px;
-  background-color: #fff;
+  background-color: rgba(211, 211, 211, 0.8470588235);
   width: 100%;
   margin: 0 auto;
   display: flex;
@@ -307,19 +339,27 @@ a {
 .speakers img {
   float: left;
   margin: 10px;
-  background-color: blue;
   display: inline;
   width: 25%;
   height: 8em;
   position: relative;
+  -o-object-fit: fill;
+     object-fit: fill;
+  border-radius: 0.5rem 10rem 0.5rem 10rem;
+  border: solid 2px #312827;
+  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.15);
 }
 .speakers__person {
-  background-color: yellow;
+  border: solid 1px gray;
+  border-radius: 0 3rem 0 3rem;
+  width: 90%;
+  margin: 0.5em auto;
+  background-color: rgba(255, 255, 255, 0.4745098039);
+  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.15);
 }
 @media screen and (min-width: 768px) {
   .speakers__person {
     width: 90%;
-    background-color: green;
     padding: 2em 0;
   }
 }
@@ -342,7 +382,7 @@ a {
 }
 .speakers__person--ul hr {
   padding: 0 10px;
-  border-bottom: solid 2px #d3d3d3;
+  border-bottom: solid 2px #312827;
   top: -10px;
 }
 .speakers__person--ul .speakers__person--description {
@@ -352,7 +392,7 @@ a {
 }
 
 .program {
-  background-color: #312827;
+  background-color: rgba(49, 40, 39, 0.9607843137);
   color: #d3d3d3;
   padding-left: 2em;
   display: flex;
@@ -376,8 +416,9 @@ a {
   }
 }
 @media screen and (min-width: 768px) {
-  .program ul {
+  .program__ul {
     padding: 3em 0;
+    text-align: center;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -390,7 +431,9 @@ a {
   justify-content: space-around;
   align-items: center;
   background-color: rgba(100, 93, 93, 0.2549019608);
-  padding: 2em 0;
+  border-top-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  padding: 1em;
   width: 95%;
   margin: 1em 0;
 }
@@ -402,10 +445,16 @@ a {
     align-items: center;
     margin: 1.5em 1em;
     width: 15%;
+    min-width: 200px;
   }
 }
 .program li img {
-  width: 30%;
+  width: 20%;
+}
+@media screen and (min-width: 768px) {
+  .program li img {
+    width: 40%;
+  }
 }
 .program li h3 {
   margin-left: 1em;
@@ -414,9 +463,15 @@ a {
   font-weight: 700;
   font-size: 1.2rem;
 }
+@media screen and (min-width: 768px) {
+  .program li h3 {
+    width: 100%;
+    padding: 0.5em 0;
+  }
+}
 .program li p {
-  margin-left: 1em;
-  width: 90%;
+  margin: 1em;
+  width: 100%;
   color: #d3d3d3;
   font-weight: 400;
   font-size: 0.8rem;
@@ -442,7 +497,7 @@ a {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  background-color: #312827;
+  background-color: rgba(49, 40, 39, 0.8352941176);
   padding: 2em 1em;
 }
 .partner__img {
@@ -453,23 +508,31 @@ a {
   align-items: center;
 }
 .partner__img img {
-  width: 30%;
+  width: 15%;
   max-width: 10em;
-  background-color: pink;
   margin: 0.3em;
 }
 
 .footer {
+  padding: 2em;
+  background-color: rgba(211, 211, 211, 0.8470588235);
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  padding: 2em;
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    padding: 0;
+  }
 }
 .footer img {
   width: 30%;
-  background-color: yellow;
-  height: 3rem;
+}
+@media screen and (min-width: 768px) {
+  .footer img {
+    width: 20%;
+  }
 }
 .footer p {
   color: #312827;
