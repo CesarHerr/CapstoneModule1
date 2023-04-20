@@ -10,54 +10,63 @@ $color: (
 
 .header__social {
   display: none;
+
   @include desktop () {
     @include flexible(row, nowrap, flex-end, center);
+
     background-color: map-get($color, "dark");
     color: map-get($color, "light");
     padding: 0.6em 0;
-    &--ul {            
+
+    &--ul {
       width: 40%;
       min-width: 350px;
-      @include flexible(row, nowrap, space-around, center);    
+
+      @include flexible(row, nowrap, space-around, center);
+
       img {
-        width: 20px;  
-        margin-left: 1em;    
+        width: 20px;
+        margin-left: 1em;
         display: inline;
-      }  
+      }
+
       .facebook {
         width: 15px;
       }
     }
-    
   }
 }
 
 .headline {
-  padding: 100px 2em;    
+  padding: 100px 2em;
   background-color: #d3d3d3d8;
+
   @include desktop() {
     margin: 0;
-    padding: 5em 8em;    
+    padding: 5em 8em;
   }
 
   @include flexible(column, wrap, center, flex-start);
 
   h2 {
     @include font( map-get($color, "fresh"), 400 , 1.3em );
+
     @include desktop () {
       @include font( map-get($color, "fresh"), 700 , 1.7em );
-    } 
+    }
   }
 
   h1 {
     @include font(map-get($color, "fresh"), 900, 3rem);
+
     @include desktop () {
-      @include font( #ec5342b0, 900 , 4em );      
+      @include font( #ec5342b0, 900 , 4em );
+
       background-image: url(../img/araucaria.jpg);
-      background-size:contain;
+      background-size: contain;
       background-repeat: repeat;
       background-clip: text;
-    } 
+    }
   }
 
   &__p {
@@ -68,31 +77,34 @@ $color: (
     border-top-right-radius: 2rem;
     border-bottom-left-radius: 2rem;
     width: 90%;
+
     @include desktop () {
       width: 50%;
       background-color: #ffffff94;
-    } 
+    }
   }
 
   h3 {
     margin: 0.7em 0;
+
     @include font(map-get($color, "dark"), 900, 1.8em);
-    
   }
 }
 
 .speakers {
   padding-top: 20px;
-  background-color: #d3d3d3d8; 
+  background-color: #d3d3d3d8;
   width: 100%;
   margin: 0 auto;
-  @include flexible(column, nowrap, center, center);   
+
+  @include flexible(column, nowrap, center, center);
 
   > .speakersCreated {
-    @include grid(2, 10px); 
-    @include desktop() { 
+    @include grid(2, 10px);
+
+    @include desktop() {
       padding: 2em 0;
-    }  
+    }
   }
 
   h2 {
@@ -103,33 +115,35 @@ $color: (
 
   img {
     float: left;
-    margin: 10px;    
+    margin: 10px;
     display: inline;
     width: 25%;
     height: 8em;
     position: relative;
-    object-fit:fill;
-    border-radius: 0rem 2rem 0rem 2rem;
-    border: solid 2px map-get($color,"dark");
+    object-fit: fill;
+    border-radius: 0 2rem 0 2rem;
+    border: solid 2px map-get($color, "dark");
     box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.15);
   }
 
-  &__person {    
+  &__person {
     border: solid 1px gray;
     border-radius: 0 3rem 0 3rem;
     width: 90%;
-    margin: .5em auto;    
+    margin: 0.5em auto;
     background-color: #ffffff79;
     box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.15);
+
     @include desktop() {
-      width: 90%;          
-      padding: 2em 0
+      width: 90%;
+      padding: 2em 0;
     }
   }
 
   &__person--ul {
-    margin-top: .5em;  
-    @include flexible(column, nowrap, center, flex-start);    
+    margin-top: 0.5em;
+
+    @include flexible(column, nowrap, center, flex-start);
 
     h3 {
       @include font(map-get($color, "dark"), 700, 1.2rem);
@@ -139,7 +153,7 @@ $color: (
       @include font(map-get($color, "fresh"), 400, 0.9rem);
     }
 
-    hr {      
+    hr {
       padding: 0 10px;
       border-bottom: solid 2px map-get($color, 'dark');
       top: -10px;
@@ -151,96 +165,6 @@ $color: (
   }
 }
 
-.program {
-  background-image: url(../img/collage.svg);
-  background-repeat: no-repeat;
-  background-position: bottom right;  
-  background-color: #312827f5;
-  color: map-get($color, 'light');
-  padding-left: 2em;
-
-  @include flexible(column, nowrap, center, center);
-
-  h2 {
-    @include font(map-get($color, "light"), 700, 2.2em);
-
-    margin: 2em 0 1em 0;
-  }  
-
-  > a {
-    display: none;
-    @include desktop() {
-      display: inline;
-      font-size: 1.5em;
-      margin: 0 0 3em 0;      
-    }
-  }
-
-  &__ul {
-    @include desktop () {
-      padding: 3em 0;     
-      text-align: center;            
-      
-      @include flexible(row, wrap, center, center);           
-    }
-  }
-
-  li {
-    @include flexible(row, nowrap, space-around, center);
-
-    background-color: #645d5d41;
-    border-top-left-radius: 2rem;
-    border-bottom-right-radius: 2rem;
-    padding: 1em;
-    width: 95%;
-    margin: 1em 0;    
-
-    @include desktop () {
-      @include flexible(column, nowrap, space-around, center);      
-      margin: 1.5em 1em;
-      width: 15%;
-      min-width: 200px;
-      height: 20em;
-    }
-
-    img {
-      width: 20%;
-      @include desktop() {
-      width: 40%;
-      }
-    }
-
-    h3 {
-      margin-left: 1em;
-      width: 60%;
-      @include desktop() {
-        width: 100%;
-        padding: .5em 0;
-      }
-
-      @include font(map-get($color, 'fresh'), 700, 1.2rem);
-    }
-
-    p {
-      margin: 1em;
-      width: 100%; 
-      text-align: justify;   
-
-      @include font(map-get($color, 'light'), 400, 0.8rem);      
-    }
-  }
-
-  button {
-    background-color: map-get($color, "fresh");    
-    color: map-get($color, "light");
-    padding: 1.5em;
-    margin-bottom: 2em;
-    @include desktop () {
-      display: none;
-    }
-  }
-}
-
 .partner {
   text-align: center;
 
@@ -248,16 +172,16 @@ $color: (
   @include flexible(column, nowrap, center, center);
 
   background-color: #312827d5;
-  padding: 2em 1em; 
+  padding: 2em 1em;
 
   &__img {
-    width: 100%;    
+    width: 100%;
 
     @include flexible(row, wrap, space-around, center);
 
     img {
       width: 15%;
-      max-width: 10em;      
+      max-width: 10em;
       margin: 0.3em;
     }
   }
@@ -266,13 +190,16 @@ $color: (
 .footer {
   padding: 2em;
   background-color: #d3d3d3d8;
+
   @include flexible(row, nowrap, center, center);
-  @include desktop() {    
+
+  @include desktop() {
     padding: 0;
   }
 
   img {
-    width: 30%;        
+    width: 30%;
+
     @include desktop() {
       width: 20%;
     }
@@ -286,49 +213,150 @@ $color: (
 .morebutton {
   width: 100%;
   margin: 0;
-  @include font(map-get($color, "dark"), 900, 1.5rem);  
+
+  @include font(map-get($color, "dark"), 900, 1.5rem);
   @include flexible(row, nowrap, center, center);
+
   &:hover {
     font-size: 2em;
     cursor: pointer;
   }
-  
+
   @include desktop() {
     display: none;
   }
 
   img {
     width: 5%;
-    margin-left: .5em;
+    margin-left: 0.5em;
     display: inline;
   }
- }
+}
 
 .lessbutton {
   @include flexible(row, nowrap, center, center);
+
   position: relative;
   top: -50px;
   width: 110%;
   margin: 0;
+
   &:hover {
     font-size: 1.2em;
     cursor: pointer;
   }
 
-  @include font(map-get($color, "dark"), 900, 1.5rem);  
+  @include font(map-get($color, "dark"), 900, 1.5rem);
+
   @include desktop() {
     display: none;
   }
 
   img {
     width: 5%;
-    margin-left: .5em;
+    margin-left: 0.5em;
     display: inline;
   }
 }
 
-.hidden, .hiddenBtn {
-  @include mobile(){
+.program {
+  background-image: url(../img/collage.svg);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-color: #312827f5;
+  color: map-get($color, 'light');
+  padding-left: 2em;
+
+  @include flexible(column, nowrap, center, center);
+
+  h2 {
+    @include font(map-get($color, "light"), 700, 2.2em);
+
+    margin: 2em 0 1em 0;
+  }
+
+  > a {
     display: none;
-  }  
-} 
+
+    @include desktop() {
+      display: inline;
+      font-size: 1.5em;
+      margin: 0 0 3em 0;
+    }
+  }
+
+  &__ul {
+    @include desktop () {
+      padding: 3em 0;
+      text-align: center;
+
+      @include flexible(row, wrap, center, center);
+    }
+  }
+
+  li {
+    @include flexible(row, nowrap, space-around, center);
+
+    background-color: #645d5d41;
+    border-top-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    padding: 1em;
+    width: 95%;
+    margin: 1em 0;
+
+    @include desktop () {
+      @include flexible(column, nowrap, space-around, center);
+
+      margin: 1.5em 1em;
+      width: 15%;
+      min-width: 200px;
+      height: 20em;
+    }
+
+    img {
+      width: 20%;
+
+      @include desktop() {
+        width: 40%;
+      }
+    }
+
+    h3 {
+      margin-left: 1em;
+      width: 60%;
+
+      @include desktop() {
+        width: 100%;
+        padding: 0.5em 0;
+      }
+
+      @include font(map-get($color, 'fresh'), 700, 1.2rem);
+    }
+
+    p {
+      margin: 1em;
+      width: 100%;
+      text-align: justify;
+
+      @include font(map-get($color, 'light'), 400, 0.8rem);
+    }
+  }
+
+  button {
+    background-color: map-get($color, "fresh");
+    color: map-get($color, "light");
+    padding: 1.5em;
+    margin-bottom: 2em;
+
+    @include desktop () {
+      display: none;
+    }
+  }
+}
+
+.hidden,
+.hiddenBtn {
+  @include mobile() {
+    display: none;
+  }
+}

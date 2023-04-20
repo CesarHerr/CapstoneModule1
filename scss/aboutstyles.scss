@@ -10,53 +10,62 @@ $color: (
 
 .header__social {
   display: none;
+
   @include desktop () {
     @include flexible(row, nowrap, flex-end, center);
+
     background-color: map-get($color, "dark");
     color: map-get($color, "light");
     padding: 0.6em 0;
-    &--ul {      
+
+    &--ul {
       width: 40%;
       min-width: 350px;
+
       @include flexible(row, nowrap, space-around, center);
+
       img {
-        width: 20px;  
-        margin-left: 1em;    
+        width: 20px;
+        margin-left: 1em;
         display: inline;
-      }  
+      }
+
       .facebook {
         width: 15px;
       }
     }
-    
   }
 }
 
-.headline {  
-  padding-top: 100px; 
+.headline {
+  padding-top: 100px;
   padding-bottom: 2em;
   background-color: #d3d3d3d8;
   text-align: center;
+
   @include desktop () {
     padding: 6rem 0;
     margin: 0;
-  }  
+  }
 
   @include flexible(column, wrap, center, center);
 
   h2 {
     @include font( map-get($color, "fresh"), 400 , 1.3em );
+
     @include desktop () {
-      @include font( map-get($color, "fresh"), 700 , 1.8em );      
+      @include font( map-get($color, "fresh"), 700 , 1.8em );
     }
   }
 
   h1 {
     @include font(map-get($color, "fresh"), 900, 3rem);
+
     @include desktop () {
       @include font(#ec5342b0, 900 , 5em );
+
       background-image: url(../img/araucaria.jpg);
-      background-size:contain;
+      background-size: contain;
       background-repeat: repeat;
       background-clip: text;
     }
@@ -71,16 +80,17 @@ $color: (
     border-top-right-radius: 2rem;
     border-bottom-left-radius: 2rem;
     width: 90%;
+
     @include desktop () {
       width: 50%;
       background-color: #ffffff94;
-      
-    } 
+    }
   }
 
   &__contact {
     text-align: center;
     width: 70%;
+
     @include desktop() {
       padding: 1em 0;
     }
@@ -96,24 +106,49 @@ $color: (
 
   h2 {
     @include font(map-get($color, "dark"), 700, 1.7rem);
-  }  
+  }
 
   p {
     @include font(map-get($color, "dark"), 400, 1.5rem);
-    margin-bottom: 2em;
 
+    margin-bottom: 2em;
     width: 80%;
+
     @include desktop() {
-      width: 60%;      
+      width: 60%;
     }
   }
 
   img {
-    width: 100%;    
+    width: 100%;
     height: 15em;
+
     @include desktop() {
       width: 50%;
     }
+  }
+}
+
+.footer {
+  padding: 2em;
+  background-color: #d3d3d3d8;
+
+  @include flexible(row, nowrap, center, center);
+
+  @include desktop() {
+    padding: 0;
+  }
+
+  img {
+    width: 30%;
+
+    @include desktop() {
+      width: 20%;
+    }
+  }
+
+  p {
+    @include font(map-get($color, "dark"), 400, 0.8rem);
   }
 }
 
@@ -124,7 +159,7 @@ $color: (
   border-top: solid 1px rgb(179, 178, 178);
   background-color: #ebe7e7ee;
   padding: 2.5em 0;
-  
+
   h2 {
     @include font(map-get($color, 'dark'), 700, 2rem);
   }
@@ -135,36 +170,41 @@ $color: (
 
   &__img {
     width: 90%;
-    margin: 2em 1em;    
+    margin: 2em 1em;
+
     @include flexible(column, nowrap, center, center);
-    
+
     p {
       @include flexible(row, nowrap, center, center);
-      padding: 2em 3.75em;        
-      width: 80%;     
-      background-color: #ec5342b7;  
-      @include font(#fff, 900, 3rem);  
+
+      padding: 2em 3.75em;
+      width: 100%;
+      background-color: #ec5342b7;
+
+      @include font(#fff, 900, 3rem);
+
       @include desktop() {
         width: 100%;
         padding: 3em;
       }
+
       &:hover {
         cursor: pointer;
         background-color: transparent;
         font-size: 3.2rem;
-        transition: all .4s ease;
+        transition: all 0.4s ease;
       }
-    } 
+    }
 
     &--para {
-      background-image: url(../img/para.jpg);  
-      background-size: cover;    
+      background-image: url(../img/para.jpg);
+      background-size: cover;
       margin: 1em;
       width: 80%;
     }
 
     &--raft {
-      background-image: url(../img/rafting.jpg);      
+      background-image: url(../img/rafting.jpg);
       background-size: cover;
       margin: 1em;
       width: 80%;
@@ -172,9 +212,10 @@ $color: (
 
     @include desktop() {
       @include flexible(row, nowrap, center, center);
-      width: 50%;      
-    }    
-  }  
+
+      width: 50%;
+    }
+  }
 }
 
 .partner {
@@ -184,37 +225,17 @@ $color: (
   @include flexible(column, nowrap, center, center);
 
   background-color: #312827d5;
-  padding: 2em 1em; 
+  padding: 2em 1em;
 
   &__img {
-    width: 100%;    
+    width: 100%;
 
     @include flexible(row, wrap, space-around, center);
 
     img {
       width: 15%;
-      max-width: 10em;      
+      max-width: 10em;
       margin: 0.3em;
     }
-  }
-}
-
-.footer {
-  padding: 2em;
-  background-color: #d3d3d3d8;
-  @include flexible(row, nowrap, center, center);
-  @include desktop() {    
-    padding: 0;
-  }
-
-  img {
-    width: 30%;        
-    @include desktop() {
-      width: 20%;
-    }
-  }
-
-  p {
-    @include font(map-get($color, "dark"), 400, 0.8rem);
   }
 }
