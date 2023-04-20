@@ -34,7 +34,7 @@
 # 📖 [Hiking and Adventure Sports] <a name="about-project"></a>
 
 
-**[Portfolio]** In this Capstone, you can find the work that I have been developing throughout my learning experience. Is a simple web about Adventure Sports experiences. This project is inspired on the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">original design idea by Cindy Shin in Behance.</a>
+**[Hiking and Adventure Sports]** In this Capstone, you can find the work that I have been developing throughout my learning experience. Is a simple web about Adventure Sports experiences. This project is inspired on the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">original design idea by Cindy Shin in Behance.</a>
 
 ## 🛠 Built With <a name="built-with"></a>
 
