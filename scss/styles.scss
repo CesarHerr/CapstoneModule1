@@ -96,7 +96,7 @@ $color: (
   }
 
   h2 {
-    @include font(map-get($color, "dark"), 700, 1.4rem);
+    @include font(map-get($color, "dark"), 700, 2rem);
 
     margin-bottom: 1em;
   }
@@ -109,7 +109,7 @@ $color: (
     height: 8em;
     position: relative;
     object-fit:fill;
-    border-radius: .5rem 10rem .5rem 10rem;
+    border-radius: 0rem 2rem 0rem 2rem;
     border: solid 2px map-get($color,"dark");
     box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.15);
   }
@@ -152,6 +152,9 @@ $color: (
 }
 
 .program {
+  background-image: url(../img/collage.svg);
+  background-repeat: no-repeat;
+  background-position: bottom right;  
   background-color: #312827f5;
   color: map-get($color, 'light');
   padding-left: 2em;
@@ -159,7 +162,7 @@ $color: (
   @include flexible(column, nowrap, center, center);
 
   h2 {
-    @include font(map-get($color, "light"), 700, 1.3em);
+    @include font(map-get($color, "light"), 700, 2.2em);
 
     margin: 2em 0 1em 0;
   }  
@@ -168,14 +171,15 @@ $color: (
     display: none;
     @include desktop() {
       display: inline;
-      margin: 0 0 5em 0;      
+      font-size: 1.5em;
+      margin: 0 0 3em 0;      
     }
   }
 
   &__ul {
     @include desktop () {
       padding: 3em 0;     
-      text-align: center;      
+      text-align: center;            
       
       @include flexible(row, wrap, center, center);           
     }
@@ -189,13 +193,14 @@ $color: (
     border-bottom-right-radius: 2rem;
     padding: 1em;
     width: 95%;
-    margin: 1em 0;
+    margin: 1em 0;    
 
     @include desktop () {
       @include flexible(column, nowrap, space-around, center);      
       margin: 1.5em 1em;
       width: 15%;
       min-width: 200px;
+      height: 20em;
     }
 
     img {
@@ -218,14 +223,15 @@ $color: (
 
     p {
       margin: 1em;
-      width: 100%;     
+      width: 100%; 
+      text-align: justify;   
 
       @include font(map-get($color, 'light'), 400, 0.8rem);      
     }
   }
 
   button {
-    background-color: map-get($color, "fresh");
+    background-color: map-get($color, "fresh");    
     color: map-get($color, "light");
     padding: 1.5em;
     margin-bottom: 2em;
@@ -279,13 +285,49 @@ $color: (
 
 .morebutton {
   width: 100%;
-  @include font(map-get($color, "dark"), 900, 1.5rem);
+  margin: 0;
+  @include font(map-get($color, "dark"), 900, 1.5rem);  
+  @include flexible(row, nowrap, center, center);
+  &:hover {
+    font-size: 2em;
+    cursor: pointer;
+  }
+  
   @include desktop() {
     display: none;
   }
+
+  img {
+    width: 5%;
+    margin-left: .5em;
+    display: inline;
+  }
  }
 
-.hidden {
+.lessbutton {
+  @include flexible(row, nowrap, center, center);
+  position: relative;
+  top: -50px;
+  width: 110%;
+  margin: 0;
+  &:hover {
+    font-size: 1.2em;
+    cursor: pointer;
+  }
+
+  @include font(map-get($color, "dark"), 900, 1.5rem);  
+  @include desktop() {
+    display: none;
+  }
+
+  img {
+    width: 5%;
+    margin-left: .5em;
+    display: inline;
+  }
+}
+
+.hidden, .hiddenBtn {
   @include mobile(){
     display: none;
   }  

@@ -33,10 +33,10 @@ $color: (
 }
 
 .headline {  
-  padding-top: 100px;
-  margin-left: 2em;
+  padding-top: 100px; 
   padding-bottom: 2em;
   background-color: #d3d3d3d8;
+  text-align: center;
   @include desktop () {
     padding: 6rem 0;
     margin: 0;
@@ -91,7 +91,7 @@ $color: (
   @include flexible(column, nowrap, center, center);
 
   text-align: center;
-  background-color: #fff;
+  background-color: #fffffff0;
   padding: 4em 0;
 
   h2 {
@@ -99,7 +99,7 @@ $color: (
   }  
 
   p {
-    @include font(map-get($color, "dark"), 400, 1rem);
+    @include font(map-get($color, "dark"), 400, 1.5rem);
     margin-bottom: 2em;
 
     width: 80%;
@@ -109,9 +109,8 @@ $color: (
   }
 
   img {
-    width: 90%;
-    background-color: #ec5242;
-    height: 10em;
+    width: 100%;    
+    height: 15em;
     @include desktop() {
       width: 50%;
     }
@@ -123,25 +122,59 @@ $color: (
 
   text-align: center;
   border-top: solid 1px rgb(179, 178, 178);
-  background-color: #fff;
+  background-color: #ebe7e7ee;
   padding: 2.5em 0;
+  
+  h2 {
+    @include font(map-get($color, 'dark'), 700, 2rem);
+  }
+
+  p {
+    @include font(map-get($color, 'dark'), 700, 1.3rem);
+  }
 
   &__img {
-    width: 100%;
-    margin: 2em 0;
+    width: 90%;
+    margin: 2em 1em;    
     @include flexible(column, nowrap, center, center);
+    
+    p {
+      @include flexible(row, nowrap, center, center);
+      padding: 2em 3.75em;        
+      width: 80%;     
+      background-color: #ec5342b7;  
+      @include font(#fff, 900, 3rem);  
+      @include desktop() {
+        width: 100%;
+        padding: 3em;
+      }
+      &:hover {
+        cursor: pointer;
+        background-color: transparent;
+        font-size: 3.2rem;
+        transition: all .4s ease;
+      }
+    } 
+
+    &--para {
+      background-image: url(../img/para.jpg);  
+      background-size: cover;    
+      margin: 1em;
+      width: 80%;
+    }
+
+    &--raft {
+      background-image: url(../img/rafting.jpg);      
+      background-size: cover;
+      margin: 1em;
+      width: 80%;
+    }
+
     @include desktop() {
       @include flexible(row, nowrap, center, center);
       width: 50%;      
     }    
-  }
-
-  img {
-    width: 80%;
-    background-color: green;
-    margin: 0.4em;
-    height: 10em;     
-  }
+  }  
 }
 
 .partner {

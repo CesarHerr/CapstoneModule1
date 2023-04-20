@@ -165,9 +165,15 @@ a {
   .header__links--menu .navbar_logo {
     display: none;
   }
-  .header__links--menu a:hover {
+  .header__links--menu li {
+    width: 100%;
+    text-align: center;
+  }
+  .header__links--menu li:hover {
     color: #ec5242;
     font-weight: 900;
+    box-shadow: -1.8px -1.8px 1.6px rgba(0, 0, 0, 0.15);
+    transition: all 0.4s ease;
   }
 }
 .header__links--menu .hamburger-close {
@@ -333,7 +339,7 @@ a {
 .speakers h2 {
   color: #312827;
   font-weight: 700;
-  font-size: 1.4rem;
+  font-size: 2rem;
   margin-bottom: 1em;
 }
 .speakers img {
@@ -345,7 +351,7 @@ a {
   position: relative;
   -o-object-fit: fill;
      object-fit: fill;
-  border-radius: 0.5rem 10rem 0.5rem 10rem;
+  border-radius: 0rem 2rem 0rem 2rem;
   border: solid 2px #312827;
   box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.15);
 }
@@ -392,6 +398,9 @@ a {
 }
 
 .program {
+  background-image: url(../img/collage.svg);
+  background-repeat: no-repeat;
+  background-position: bottom right;
   background-color: rgba(49, 40, 39, 0.9607843137);
   color: #d3d3d3;
   padding-left: 2em;
@@ -403,7 +412,7 @@ a {
 .program h2 {
   color: #d3d3d3;
   font-weight: 700;
-  font-size: 1.3em;
+  font-size: 2.2em;
   margin: 2em 0 1em 0;
 }
 .program > a {
@@ -412,7 +421,8 @@ a {
 @media screen and (min-width: 768px) {
   .program > a {
     display: inline;
-    margin: 0 0 5em 0;
+    font-size: 1.5em;
+    margin: 0 0 3em 0;
   }
 }
 @media screen and (min-width: 768px) {
@@ -446,6 +456,7 @@ a {
     margin: 1.5em 1em;
     width: 15%;
     min-width: 200px;
+    height: 20em;
   }
 }
 .program li img {
@@ -472,6 +483,7 @@ a {
 .program li p {
   margin: 1em;
   width: 100%;
+  text-align: justify;
   color: #d3d3d3;
   font-weight: 400;
   font-size: 0.8rem;
@@ -542,18 +554,60 @@ a {
 
 .morebutton {
   width: 100%;
+  margin: 0;
   color: #312827;
   font-weight: 900;
   font-size: 1.5rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.morebutton:hover {
+  font-size: 2em;
+  cursor: pointer;
 }
 @media screen and (min-width: 768px) {
   .morebutton {
     display: none;
   }
 }
+.morebutton img {
+  width: 5%;
+  margin-left: 0.5em;
+  display: inline;
+}
+
+.lessbutton {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -50px;
+  width: 110%;
+  margin: 0;
+  color: #312827;
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+.lessbutton:hover {
+  font-size: 1.2em;
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  .lessbutton {
+    display: none;
+  }
+}
+.lessbutton img {
+  width: 5%;
+  margin-left: 0.5em;
+  display: inline;
+}
 
 @media screen and (max-width: 768px) {
-  .hidden {
+  .hidden, .hiddenBtn {
     display: none;
   }
 }/*# sourceMappingURL=styles.css.map */

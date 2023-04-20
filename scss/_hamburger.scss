@@ -92,10 +92,18 @@ $color: (
       .navbar_logo {
         display: none;
       }
-      a:hover {
-        color: map-get($color,"fresh");
-        font-weight: 900;
-      }
+
+      li{
+        width: 100%;
+        text-align: center;      
+        
+        &:hover {
+          color: map-get($color,"fresh");
+          font-weight: 900;        
+          box-shadow:-1.8px -1.8px 1.6px rgba(0, 0, 0, 0.15);
+          transition: all .4s ease;
+        }
+      }  
     }  
 
     .hamburger-close {
