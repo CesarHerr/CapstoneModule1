@@ -67,10 +67,10 @@ $color: (
     margin-top: 0;
     transform: translate3d(0, -120%, 0);
     transition: transform 0.6s ease-in-out;
-    background-color: #8f615cf9;
+    background-color: #d3d3d3f5;
 
     @include flexible(column, nowrap, center, flex-start);
-    @include font(#272a31, 900, 2rem);    
+    @include font(#272a31, 900, 2rem);
 
     .navbar_logo {
       display: inline;
@@ -104,24 +104,22 @@ $color: (
       }
 
       span {
-        border: solid 4px #EC5242;
-        padding: .5em;  
-        
+        border: solid 4px #ec5242;
+        padding: 0.5em;
+
         a {
           display: inline;
           position: relative;
-        
-          
         }
       }
 
-      li {         
-        margin: 0 2%;      
-      
+      li {
+        margin: 0 2%;
+
         &:hover {
           color: map-get($color, "fresh");
           font-weight: 900;
-        }        
+        }
       }
     }
 

@@ -12,7 +12,8 @@ $color: (
   display: none;
 
   @include desktop () {
-    width: 100%; 
+    width: 100%;
+
     @include flexible(row, nowrap, flex-end, center);
 
     background-color: map-get($color, "dark");
@@ -22,7 +23,8 @@ $color: (
     &--ul {
       width: 40%;
       min-width: 550px;
-      padding-right: 12em; 
+      padding-right: 12em;
+
       @include flexible(row, nowrap, space-around, center);
 
       img {
@@ -40,7 +42,7 @@ $color: (
 
 .headline {
   padding: 100px 2em;
-  background-color: #d3d3d3d8;
+  background-color: #ffffffcb;
 
   @include desktop() {
     margin: 0;
@@ -58,30 +60,29 @@ $color: (
   }
 
   h1 {
-    @include font(map-get($color, "fresh"), 900, 3rem);
+    @include font( #ec5342b0, 900 , 2.7em );
+
+    background-image: url(../img/tekking.jpg);
+    background-size: contain;
+    background-repeat: repeat;
+    background-clip: text;
+    margin: 0.6em 0;
 
     @include desktop () {
       @include font( #ec5342b0, 900 , 3em );
-
-      background-image: url(../img/tekking.jpg);
-      background-size: contain;
-      background-repeat: repeat;
-      background-clip: text;
     }
   }
 
   &__p {
-    margin-top: 1em;
+    margin-top: 0;
     padding: 15px;
-    border: double 3px #fff;
-    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.15);    
+    border: solid 3px #fff;
     width: 90%;
-    min-width: 500px;
-    background-color: #ffffff61;
+    min-width: 400px;
+    background-color: #ffffff84;
 
     @include desktop () {
-      width: 50%;
-      
+      width: 60%;
     }
   }
 
@@ -94,7 +95,7 @@ $color: (
 
 .speakers {
   padding-top: 20px;
-  background-color: #d3d3d3d8;
+  background-color: #ffffffe0;
   width: 100%;
   margin: 0 auto;
 
@@ -108,8 +109,12 @@ $color: (
     }
   }
 
+  hr {
+    top: -25px;
+  }
+
   h2 {
-    @include font(map-get($color, "dark"), 700, 2rem);
+    @include font(map-get($color, "dark"), 700, 1.6rem);
 
     margin-bottom: 1em;
   }
@@ -118,22 +123,16 @@ $color: (
     float: left;
     margin: 10px;
     display: inline;
-    width: 25%;
-    height: 8em;
+    width: 35%;
+    height: 10em;
     position: relative;
     object-fit: fill;
-    border-radius: 0 2rem 0 2rem;
-    border: solid 2px map-get($color, "dark");
-    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.15);
   }
 
   &__person {
-    border: solid 1px gray;
     border-radius: 0 3rem 0 3rem;
-    width: 90%;
+    width: 98%;
     margin: 0.5em auto;
-    background-color: #ffffff79;
-    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.15);
 
     @include desktop() {
       width: 90%;
@@ -152,11 +151,13 @@ $color: (
 
     p {
       @include font(map-get($color, "fresh"), 400, 0.9rem);
+
+      font-style: italic;
     }
 
     hr {
       padding: 0 10px;
-      border-bottom: solid 2px map-get($color, 'dark');
+      border-bottom: solid 2px #b8b7b7;
       top: -10px;
     }
 
@@ -190,7 +191,7 @@ $color: (
 
 .footer {
   padding: 2em;
-  background-color: #d3d3d3d8;
+  background-color: #ffffffe0;
 
   @include flexible(row, nowrap, center, center);
 
@@ -213,28 +214,34 @@ $color: (
 
 .more {
   padding: 2em 0;
-  background-color: #d3d3d3d8;
+  background-color: #ffffffe0;
   display: inline;
   position: absolute;
   width: 100%;
 
+  @include desktop() {
+    display: none;
+  }
+
   .more__button {
     margin: 1em 0;
-    padding: .5em 0;
+    padding: 0.5em 0;
     width: 100%;
-    @include font(map-get($color, "dark"), 900, 1.5rem);
+    border: solid 2px map-get($color, "light");
+
+    @include font(map-get($color, "dark"), 700, 1.3rem);
     @include flexible(row, nowrap, center, center);
-  
+
     &:hover {
       font-size: 2em;
       cursor: pointer;
     }
-  
+
     @include desktop() {
       display: none;
     }
-  
-    img {
+
+    .more__button--img {
       width: 5%;
       margin-left: 0.5em;
       display: inline;
@@ -242,22 +249,22 @@ $color: (
   }
 }
 
-
-
 .lessbutton {
   @include flexible(row, nowrap, center, center);
 
   position: relative;
   top: -50px;
-  width: 110%;
+  width: 100%;
   margin: 0;
+  border: solid 2px map-get($color, "light");
+  padding: 0.3em 0;
 
   &:hover {
     font-size: 1.2em;
     cursor: pointer;
   }
 
-  @include font(map-get($color, "dark"), 900, 1.5rem);
+  @include font(map-get($color, "dark"), 700, 1.3rem);
 
   @include desktop() {
     display: none;
@@ -274,7 +281,7 @@ $color: (
   background-image: url(../img/collage.svg);
   background-repeat: no-repeat;
   background-position: bottom right;
-  background-color: #312827f5;
+  background-color: rgba(38, 43, 49, 0.9);
   color: map-get($color, 'light');
   padding-left: 2em;
 
@@ -293,12 +300,13 @@ $color: (
       display: inline;
       font-size: 1.5em;
       margin: 0 0 3em 0;
+      text-decoration: underline;
     }
   }
 
   &__ul {
     @include desktop () {
-      padding: 3em 0;
+      padding: 0.5em 0;
       text-align: center;
 
       @include flexible(row, wrap, center, fill);
@@ -308,7 +316,7 @@ $color: (
   li {
     @include flexible(row, nowrap, space-around, center);
 
-    background-color: #645d5d41;    
+    background-color: #645d5d41;
     padding: 1em;
     width: 95%;
     margin: 1em 0;
@@ -319,7 +327,6 @@ $color: (
       margin: 1.5em 0.3em;
       width: 15%;
       min-width: 100px;
-      
     }
 
     img {
@@ -352,10 +359,15 @@ $color: (
   }
 
   button {
+    @include font(map-get($color, "light"), 400, 1.2rem);
+
     background-color: map-get($color, "fresh");
-    color: map-get($color, "light");
-    padding: 1.5em;
+    padding: 1.3em 2.5em;
     margin-bottom: 2em;
+
+    &:hover {
+      cursor: pointer;
+    }
 
     @include desktop () {
       display: none;

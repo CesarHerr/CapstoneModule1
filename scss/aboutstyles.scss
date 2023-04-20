@@ -40,7 +40,7 @@ $color: (
 .headline {
   padding-top: 100px;
   padding-bottom: 2em;
-  background-color: #d3d3d3d8;
+  background-color: #ffffffd0;
   text-align: center;
 
   @include desktop () {
@@ -51,7 +51,7 @@ $color: (
   @include flexible(column, wrap, center, center);
 
   h2 {
-    @include font( map-get($color, "fresh"), 400 , 1.3em );
+    @include font( map-get($color, "fresh"), 00 , 1.3em );
 
     @include desktop () {
       @include font( map-get($color, "fresh"), 700 , 1.8em );
@@ -59,15 +59,15 @@ $color: (
   }
 
   h1 {
-    @include font(map-get($color, "fresh"), 900, 3rem);
+    @include font(#ec5342b0, 900, 2.2rem);
+
+    background-image: url(../img/tekking.jpg);
+    background-size: contain;
+    background-repeat: repeat;
+    background-clip: text;
 
     @include desktop () {
       @include font(#ec5342b0, 900 , 3em );
-
-      background-image: url(../img/tekking.jpg);
-      background-size: contain;
-      background-repeat: repeat;
-      background-clip: text;
     }
   }
 
@@ -75,10 +75,12 @@ $color: (
     text-align: center;
     margin-top: 1em;
     padding: 10px;
-    border: solid 3px #fff;
-    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.15);   
-    width: 90%;
-    min-width: 600px;
+    border: solid 3px map-get($color, "light");
+    width: 80%;
+    min-width: 350px;
+    background-color: #ffffff94;
+
+    @include font(map-get($color,"dark"), 400, 0.9rem);
 
     @include desktop () {
       width: 50%;
@@ -89,10 +91,19 @@ $color: (
   &__contact {
     text-align: center;
     width: 70%;
+    margin: 1em 0;
+
+    @include font(map-get($color,"dark"), 400, 0.9rem);
 
     @include desktop() {
       padding: 1em 0;
     }
+  }
+
+  a {
+    @include font(map-get($color,"dark"), 700, 0.9rem);
+
+    text-decoration: underline;
   }
 }
 
@@ -108,7 +119,7 @@ $color: (
   }
 
   p {
-    @include font(map-get($color, "dark"), 400, 1.5rem);
+    @include font(map-get($color, "dark"), 400, 1.2rem);
 
     margin-bottom: 2em;
     width: 80%;
@@ -119,8 +130,10 @@ $color: (
   }
 
   img {
-    width: 100%;
+    width: 70%;
     height: 15em;
+    padding: 3em;
+    border: solid 2px map-get($color, "light");
 
     @include desktop() {
       width: 50%;
@@ -144,23 +157,26 @@ $color: (
 
     @include desktop() {
       display: inline;
-      margin-top: .5em;
+      margin-top: 0.5em;
       width: 30%;
     }
-  } 
-  
+  }
+
   &__mobileimg {
     width: 30%;
+
     @include desktop() {
       display: none;
     }
-  }  
+  }
 
   p {
-    margin-left: 4em; 
+    margin-left: 4em;
+
     @include font(map-get($color, "dark"), 400, 0.8rem);
-    @include desktop(){
-      color: map-get($color, "light" );
+
+    @include desktop() {
+      color: map-get($color, "light");
     }
   }
 }
@@ -170,7 +186,7 @@ $color: (
 
   text-align: center;
   border-top: solid 1px rgb(179, 178, 178);
-  background-color: #ebe7e7ee;
+  background-color: #fffffff0;
   padding: 2.5em 0;
 
   h2 {
@@ -191,7 +207,7 @@ $color: (
       @include flexible(row, nowrap, center, center);
 
       padding: 2em 2.95em;
-      width: 80%;
+      width: 100%;
       background-color: #ec5342b7;
 
       @include font(#fff, 900, 3rem);
@@ -237,7 +253,7 @@ $color: (
   @include font(map-get($color, "light"), 400, 1.5rem);
   @include flexible(column, nowrap, center, center);
 
-  background-color: #312827d5;
+  background-color: rgba(64, 67, 70, 0.9);
   padding: 2em 1em;
 
   &__img {
