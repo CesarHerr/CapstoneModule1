@@ -77,7 +77,11 @@
 
 <!-- LIVE DEMO -->
 
-## 🚀 Live Demo <a name="live-demo"></a>
+## 🚀 Live Demo
+<a name="live-demo"><a href="https://www.loom.com/share/f32174e0840445a19c3f60cb60269dda">
+    <p>Brave - Capstone Module 1 - Brave - 20 April 2023 - Watch Video</p>
+    <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/f32174e0840445a19c3f60cb60269dda-with-play.gif">
+  </a></a>
 
 
 - https://cesarherr.github.io/CapstoneModule1/

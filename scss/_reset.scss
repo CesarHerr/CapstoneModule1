@@ -18,10 +18,10 @@ html {
 }
 
 body {
-  background-image: url(../img/araucaria.jpg);
+  background-image: url(../img/tekking.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-blend-mode: lighten;
+  background-attachment: fixed;
   min-height: 100vh;
   font-size: 100%;
   font-family: 'Lato', sans-serif;

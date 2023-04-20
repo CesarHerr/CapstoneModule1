@@ -18,10 +18,10 @@ html {
 }
 
 body {
-  background-image: url(../img/araucaria.jpg);
+  background-image: url(../img/tekking.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-blend-mode: lighten;
+  background-attachment: fixed;
   min-height: 100vh;
   font-size: 100%;
   font-family: "Lato", sans-serif;
@@ -315,7 +315,7 @@ a {
     color: rgba(236, 83, 66, 0.6901960784);
     font-weight: 900;
     font-size: 5em;
-    background-image: url(../img/araucaria.jpg);
+    background-image: url(../img/tekking.jpg);
     background-size: contain;
     background-repeat: repeat;
     -webkit-background-clip: text;
@@ -461,8 +461,8 @@ a {
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
-  padding: 2em 3.75em;
-  width: 100%;
+  padding: 2em 2.95em;
+  width: 80%;
   background-color: rgba(236, 83, 66, 0.7176470588);
   color: #fff;
   font-weight: 900;

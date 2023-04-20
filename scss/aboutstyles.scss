@@ -64,7 +64,7 @@ $color: (
     @include desktop () {
       @include font(#ec5342b0, 900 , 5em );
 
-      background-image: url(../img/araucaria.jpg);
+      background-image: url(../img/tekking.jpg);
       background-size: contain;
       background-repeat: repeat;
       background-clip: text;
@@ -177,8 +177,8 @@ $color: (
     p {
       @include flexible(row, nowrap, center, center);
 
-      padding: 2em 3.75em;
-      width: 100%;
+      padding: 2em 2.95em;
+      width: 80%;
       background-color: #ec5342b7;
 
       @include font(#fff, 900, 3rem);
