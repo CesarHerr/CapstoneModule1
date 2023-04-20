@@ -41,7 +41,7 @@ $color: (
     @include desktop {
       display: inline;
       position: absolute;
-      left: 8em;
+      left: 12%;
       width: 100px;
     }
   }
@@ -70,7 +70,7 @@ $color: (
     background-color: #8f615cf9;
 
     @include flexible(column, nowrap, center, flex-start);
-    @include font(#272a31, 900, 2rem);
+    @include font(#272a31, 900, 2rem);    
 
     .navbar_logo {
       display: inline;
@@ -92,27 +92,36 @@ $color: (
       transform: none;
 
       @include font(#272a31, 400, 1rem);
-      @include flexible(row, nowrap, space-around, center);
+      @include flexible(row, nowrap, flex-end, center);
 
       width: 50%;
-      min-width: 400px;
+      min-width: 500px;
       background-color: #ffffff6c;
-      margin-right: 4em;
+      margin-right: 12%;
 
       .navbar_logo {
         display: none;
       }
 
-      li {
-        width: 100%;
-        text-align: center;
+      span {
+        border: solid 4px #EC5242;
+        padding: .5em;  
+        
+        a {
+          display: inline;
+          position: relative;
+        
+          
+        }
+      }
 
+      li {         
+        margin: 0 2%;      
+      
         &:hover {
           color: map-get($color, "fresh");
           font-weight: 900;
-          box-shadow: -1.8px -1.8px 1.6px rgba(0, 0, 0, 0.15);
-          transition: all 0.4s ease;
-        }
+        }        
       }
     }
 

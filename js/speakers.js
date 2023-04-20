@@ -71,7 +71,7 @@ objectWorks.forEach((parameter, index) => {
 });
 speakerSection.append(...speakersArray);
 
-const moreButton = document.querySelector('.morebutton');
+const moreButton = document.querySelector('.more__button');
 const lessButton = document.querySelector('.lessbutton');
 const speakerHidden = document.querySelectorAll('.hidden');
 
@@ -80,7 +80,7 @@ moreButton.addEventListener('click', () => {
     speakerHidden[i].classList.toggle('hidden');
   }
   lessButton.classList.toggle('hiddenBtn');
-  document.querySelector('.morebutton').style.display = 'none';
+  document.querySelector('.more__button').style.display = 'none';
 });
 
 lessButton.addEventListener('click', () => {
@@ -88,5 +88,5 @@ lessButton.addEventListener('click', () => {
     speakerHidden[i].classList.toggle('hidden');
   }
   lessButton.classList.toggle('hiddenBtn');
-  document.querySelector('.morebutton').style.display = 'inline';
+  document.querySelector('.more__button').style.display = 'inline';
 });

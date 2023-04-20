@@ -12,6 +12,7 @@ $color: (
   display: none;
 
   @include desktop () {
+    width: 100%; 
     @include flexible(row, nowrap, flex-end, center);
 
     background-color: map-get($color, "dark");
@@ -20,8 +21,8 @@ $color: (
 
     &--ul {
       width: 40%;
-      min-width: 350px;
-
+      min-width: 550px;
+      padding-right: 12em; 
       @include flexible(row, nowrap, space-around, center);
 
       img {
@@ -210,28 +211,38 @@ $color: (
   }
 }
 
-.morebutton {
+.more {
+  padding: 2em 0;
+  background-color: #d3d3d3d8;
+  display: inline;
+  position: absolute;
   width: 100%;
-  margin: 0;
 
-  @include font(map-get($color, "dark"), 900, 1.5rem);
-  @include flexible(row, nowrap, center, center);
-
-  &:hover {
-    font-size: 2em;
-    cursor: pointer;
-  }
-
-  @include desktop() {
-    display: none;
-  }
-
-  img {
-    width: 5%;
-    margin-left: 0.5em;
-    display: inline;
+  .more__button {
+    margin: 1em 0;
+    padding: .5em 0;
+    width: 100%;
+    @include font(map-get($color, "dark"), 900, 1.5rem);
+    @include flexible(row, nowrap, center, center);
+  
+    &:hover {
+      font-size: 2em;
+      cursor: pointer;
+    }
+  
+    @include desktop() {
+      display: none;
+    }
+  
+    img {
+      width: 5%;
+      margin-left: 0.5em;
+      display: inline;
+    }
   }
 }
+
+
 
 .lessbutton {
   @include flexible(row, nowrap, center, center);
