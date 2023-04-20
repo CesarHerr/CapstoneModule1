@@ -1,0 +1,383 @@
+@import '_reset';
+@import '_mixins';
+@import '_hamburger';
+
+$color: (
+  "dark": #312827,
+  "fresh": #ec5242,
+  "light" : #d3d3d3
+);
+
+.header__social {
+  display: none;
+
+  @include desktop () {
+    width: 100%;
+
+    @include flexible(row, nowrap, flex-end, center);
+
+    background-color: map-get($color, "dark");
+    color: map-get($color, "light");
+    padding: 0.6em 0;
+
+    &--ul {
+      width: 40%;
+      min-width: 550px;
+      padding-right: 12em;
+
+      @include flexible(row, nowrap, space-around, center);
+
+      img {
+        width: 20px;
+        margin-left: 1em;
+        display: inline;
+      }
+
+      .facebook {
+        width: 15px;
+      }
+    }
+  }
+}
+
+.headline {
+  padding: 100px 2em;
+  background-color: #ffffffcb;
+
+  @include desktop() {
+    margin: 0;
+    padding: 5em 8em;
+  }
+
+  @include flexible(column, wrap, center, flex-start);
+
+  h2 {
+    @include font( map-get($color, "fresh"), 400 , 1.3em );
+
+    @include desktop () {
+      @include font( map-get($color, "fresh"), 700 , 1.7em );
+    }
+  }
+
+  h1 {
+    @include font( #ec5342b0, 900 , 2.7em );
+
+    background-image: url(../img/tekking.jpg);
+    background-size: contain;
+    background-repeat: repeat;
+    background-clip: text;
+    margin: 0.6em 0;
+
+    @include desktop () {
+      @include font( #ec5342b0, 900 , 3em );
+    }
+  }
+
+  &__p {
+    margin-top: 0;
+    padding: 15px;
+    border: solid 3px #fff;
+    width: 90%;
+    min-width: 400px;
+    background-color: #ffffff84;
+
+    @include desktop () {
+      width: 60%;
+    }
+  }
+
+  h3 {
+    margin: 0.7em 0;
+
+    @include font(map-get($color, "dark"), 900, 1.8em);
+  }
+}
+
+.speakers {
+  padding-top: 20px;
+  background-color: #ffffffe0;
+  width: 100%;
+  margin: 0 auto;
+
+  @include flexible(column, nowrap, center, center);
+
+  > .speakersCreated {
+    @include grid(2, 10px);
+
+    @include desktop() {
+      padding: 2em 0;
+    }
+  }
+
+  hr {
+    top: -25px;
+  }
+
+  h2 {
+    @include font(map-get($color, "dark"), 700, 1.6rem);
+
+    margin-bottom: 1em;
+  }
+
+  img {
+    float: left;
+    margin: 10px;
+    display: inline;
+    width: 35%;
+    height: 10em;
+    position: relative;
+    object-fit: fill;
+  }
+
+  &__person {
+    border-radius: 0 3rem 0 3rem;
+    width: 98%;
+    margin: 0.5em auto;
+
+    @include desktop() {
+      width: 90%;
+      padding: 2em 0;
+    }
+  }
+
+  &__person--ul {
+    margin-top: 0.5em;
+
+    @include flexible(column, nowrap, center, flex-start);
+
+    h3 {
+      @include font(map-get($color, "dark"), 700, 1.2rem);
+    }
+
+    p {
+      @include font(map-get($color, "fresh"), 400, 0.9rem);
+
+      font-style: italic;
+    }
+
+    hr {
+      padding: 0 10px;
+      border-bottom: solid 2px #b8b7b7;
+      top: -10px;
+    }
+
+    .speakers__person--description {
+      @include font(map-get($color, "dark"), 400, 0.8rem);
+    }
+  }
+}
+
+.partner {
+  text-align: center;
+
+  @include font(map-get($color, "light"), 400, 1.5rem);
+  @include flexible(column, nowrap, center, center);
+
+  background-color: #312827d5;
+  padding: 2em 1em;
+
+  &__img {
+    width: 100%;
+
+    @include flexible(row, wrap, space-around, center);
+
+    img {
+      width: 15%;
+      max-width: 10em;
+      margin: 0.3em;
+    }
+  }
+}
+
+.footer {
+  padding: 2em;
+  background-color: #ffffffe0;
+
+  @include flexible(row, nowrap, center, center);
+
+  @include desktop() {
+    padding: 0;
+  }
+
+  img {
+    width: 30%;
+
+    @include desktop() {
+      width: 20%;
+    }
+  }
+
+  p {
+    @include font(map-get($color, "dark"), 400, 0.8rem);
+  }
+}
+
+.more {
+  padding: 2em 0;
+  background-color: #ffffffe0;
+  display: inline;
+  position: absolute;
+  width: 100%;
+
+  @include desktop() {
+    display: none;
+  }
+
+  .more__button {
+    margin: 1em 0;
+    padding: 0.5em 0;
+    width: 100%;
+    border: solid 2px map-get($color, "light");
+
+    @include font(map-get($color, "dark"), 700, 1.3rem);
+    @include flexible(row, nowrap, center, center);
+
+    &:hover {
+      font-size: 2em;
+      cursor: pointer;
+    }
+
+    @include desktop() {
+      display: none;
+    }
+
+    .more__button--img {
+      width: 5%;
+      margin-left: 0.5em;
+      display: inline;
+    }
+  }
+}
+
+.lessbutton {
+  @include flexible(row, nowrap, center, center);
+
+  position: relative;
+  top: -50px;
+  width: 100%;
+  margin: 0;
+  border: solid 2px map-get($color, "light");
+  padding: 0.3em 0;
+
+  &:hover {
+    font-size: 1.2em;
+    cursor: pointer;
+  }
+
+  @include font(map-get($color, "dark"), 700, 1.3rem);
+
+  @include desktop() {
+    display: none;
+  }
+
+  img {
+    width: 5%;
+    margin-left: 0.5em;
+    display: inline;
+  }
+}
+
+.program {
+  background-image: url(../img/collage.svg);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-color: rgba(38, 43, 49, 0.9);
+  color: map-get($color, 'light');
+  padding-left: 2em;
+
+  @include flexible(column, nowrap, center, center);
+
+  h2 {
+    @include font(map-get($color, "light"), 700, 2.2em);
+
+    margin: 2em 0 1em 0;
+  }
+
+  > a {
+    display: none;
+
+    @include desktop() {
+      display: inline;
+      font-size: 1.5em;
+      margin: 0 0 3em 0;
+      text-decoration: underline;
+    }
+  }
+
+  &__ul {
+    @include desktop () {
+      padding: 0.5em 0;
+      text-align: center;
+
+      @include flexible(row, wrap, center, fill);
+    }
+  }
+
+  li {
+    @include flexible(row, nowrap, space-around, center);
+
+    background-color: #645d5d41;
+    padding: 1em;
+    width: 95%;
+    margin: 1em 0;
+
+    @include desktop () {
+      @include flexible(column, nowrap, space-around, center);
+
+      margin: 1.5em 0.3em;
+      width: 15%;
+      min-width: 100px;
+    }
+
+    img {
+      width: 20%;
+
+      @include desktop() {
+        width: 40%;
+      }
+    }
+
+    h3 {
+      margin-left: 1em;
+      width: 60%;
+
+      @include desktop() {
+        width: 100%;
+        padding: 0.5em 0;
+      }
+
+      @include font(map-get($color, 'fresh'), 700, 1.2rem);
+    }
+
+    p {
+      margin: 1em;
+      width: 100%;
+      text-align: justify;
+
+      @include font(map-get($color, 'light'), 400, 0.8rem);
+    }
+  }
+
+  button {
+    @include font(map-get($color, "light"), 400, 1.2rem);
+
+    background-color: map-get($color, "fresh");
+    padding: 1.3em 2.5em;
+    margin-bottom: 2em;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    @include desktop () {
+      display: none;
+    }
+  }
+}
+
+.hidden,
+.hiddenBtn {
+  @include mobile() {
+    display: none;
+  }
+}

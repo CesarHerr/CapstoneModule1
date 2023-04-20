@@ -1,0 +1,274 @@
+@import '_reset';
+@import '_mixins';
+@import '_hamburger';
+
+$color: (
+  "dark": #272a31,
+  "fresh": #ec5242,
+  "light" : #d3d3d3
+);
+
+.header__social {
+  display: none;
+
+  @include desktop () {
+    @include flexible(row, nowrap, flex-end, center);
+
+    background-color: map-get($color, "dark");
+    color: map-get($color, "light");
+    padding: 0.6em 0;
+
+    &--ul {
+      width: 40%;
+      min-width: 350px;
+
+      @include flexible(row, nowrap, space-around, center);
+
+      img {
+        width: 20px;
+        margin-left: 1em;
+        display: inline;
+      }
+
+      .facebook {
+        width: 15px;
+      }
+    }
+  }
+}
+
+.headline {
+  padding-top: 100px;
+  padding-bottom: 2em;
+  background-color: #ffffffd0;
+  text-align: center;
+
+  @include desktop () {
+    padding: 6rem 0;
+    margin: 0;
+  }
+
+  @include flexible(column, wrap, center, center);
+
+  h2 {
+    @include font( map-get($color, "fresh"), 00 , 1.3em );
+
+    @include desktop () {
+      @include font( map-get($color, "fresh"), 700 , 1.8em );
+    }
+  }
+
+  h1 {
+    @include font(#ec5342b0, 900, 2.2rem);
+
+    background-image: url(../img/tekking.jpg);
+    background-size: contain;
+    background-repeat: repeat;
+    background-clip: text;
+
+    @include desktop () {
+      @include font(#ec5342b0, 900 , 3em );
+    }
+  }
+
+  &__description {
+    text-align: center;
+    margin-top: 1em;
+    padding: 10px;
+    border: solid 3px map-get($color, "light");
+    width: 80%;
+    min-width: 350px;
+    background-color: #ffffff94;
+
+    @include font(map-get($color,"dark"), 400, 0.9rem);
+
+    @include desktop () {
+      width: 50%;
+      background-color: #ffffff94;
+    }
+  }
+
+  &__contact {
+    text-align: center;
+    width: 70%;
+    margin: 1em 0;
+
+    @include font(map-get($color,"dark"), 400, 0.9rem);
+
+    @include desktop() {
+      padding: 1em 0;
+    }
+  }
+
+  a {
+    @include font(map-get($color,"dark"), 700, 0.9rem);
+
+    text-decoration: underline;
+  }
+}
+
+.logo {
+  @include flexible(column, nowrap, center, center);
+
+  text-align: center;
+  background-color: #fffffff0;
+  padding: 4em 0;
+
+  h2 {
+    @include font(map-get($color, "dark"), 700, 1.7rem);
+  }
+
+  p {
+    @include font(map-get($color, "dark"), 400, 1.2rem);
+
+    margin-bottom: 2em;
+    width: 80%;
+
+    @include desktop() {
+      width: 60%;
+    }
+  }
+
+  img {
+    width: 70%;
+    height: 15em;
+    padding: 3em;
+    border: solid 2px map-get($color, "light");
+
+    @include desktop() {
+      width: 50%;
+    }
+  }
+}
+
+.footer {
+  padding: 2em;
+  background-color: #ffffffe8;
+
+  @include flexible(row, nowrap, center, center);
+
+  @include desktop() {
+    padding: 0;
+    background-color: #272a31ed;
+  }
+
+  &__desktopimg {
+    display: none;
+
+    @include desktop() {
+      display: inline;
+      margin-top: 0.5em;
+      width: 30%;
+    }
+  }
+
+  &__mobileimg {
+    width: 30%;
+
+    @include desktop() {
+      display: none;
+    }
+  }
+
+  p {
+    margin-left: 4em;
+
+    @include font(map-get($color, "dark"), 400, 0.8rem);
+
+    @include desktop() {
+      color: map-get($color, "light");
+    }
+  }
+}
+
+.seethepast {
+  @include flexible(column, nowrap, center, center);
+
+  text-align: center;
+  border-top: solid 1px rgb(179, 178, 178);
+  background-color: #fffffff0;
+  padding: 2.5em 0;
+
+  h2 {
+    @include font(map-get($color, 'dark'), 700, 2rem);
+  }
+
+  p {
+    @include font(map-get($color, 'dark'), 700, 1.3rem);
+  }
+
+  &__img {
+    width: 90%;
+    margin: 2em 1em;
+
+    @include flexible(column, nowrap, center, center);
+
+    p {
+      @include flexible(row, nowrap, center, center);
+
+      padding: 2em 2.95em;
+      width: 100%;
+      background-color: #ec5342b7;
+
+      @include font(#fff, 900, 3rem);
+
+      @include desktop() {
+        width: 100%;
+        padding: 3em;
+      }
+
+      &:hover {
+        cursor: pointer;
+        background-color: transparent;
+        font-size: 3.2rem;
+        transition: all 0.4s ease;
+      }
+    }
+
+    &--para {
+      background-image: url(../img/para.jpg);
+      background-size: cover;
+      margin: 1em;
+      width: 80%;
+    }
+
+    &--raft {
+      background-image: url(../img/rafting.jpg);
+      background-size: cover;
+      margin: 1em;
+      width: 80%;
+    }
+
+    @include desktop() {
+      @include flexible(row, nowrap, center, center);
+
+      width: 50%;
+    }
+  }
+}
+
+.partner {
+  text-align: center;
+
+  @include font(map-get($color, "light"), 400, 1.5rem);
+  @include flexible(column, nowrap, center, center);
+
+  background-color: rgba(64, 67, 70, 0.9);
+  padding: 2em 1em;
+
+  &__img {
+    width: 100%;
+
+    @include flexible(row, wrap, space-around, center);
+
+    img {
+      width: 15%;
+      max-width: 10em;
+      margin: 0.3em;
+    }
+  }
+
+  @include desktop() {
+    display: none;
+  }
+}

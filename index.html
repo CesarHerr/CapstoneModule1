@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="./scss/styles.css">
+    <title>Capstone Module 1</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__social">
+            <ul class="header__social--ul">
+                <li>
+                    <img class="facebook" src="./img/facebook.svg" alt="facebook">
+                    <img  class="twitter"src="./img/twitterWhite.svg" alt="Twitter">
+                </li>
+                <li>English</li>
+                <li>My Page</li>
+                <li>Logout</li>
+            </ul>
+        </div>
+        <nav class="header__links">
+            <a class="header__links--logo" href="index.html"><img src="./img/Unlimited2.svg" alt="image_logo"></a>
+            <ul class=" header__links--menu">
+                <a class="header__links--logo navbar_logo" href="index.html"><img src="./img/Unlimited2.svg" alt="image_logo"></a>    
+                <button class="hamburger-close"><img src="./img/xIcon.png" alt="hamburger_close"></button>    
+                <li><a href="about.html">About</a></li>
+                <li><a href="#program">Program</a></li>
+                <li><a href="#">Join</a></li>
+                <li><a href="#partners">Sponsor</a></li>
+                <li><a href="#">News</a></li>
+            </span><li><a href="#"><span class="campaign__border">CC Campaign</a></li></span>                                    
+            </ul>                
+            <button class="hamburger-open"><img src="./img/Hamburger_icon.png" alt="hamburger-icon"></button>                
+        </nav> 
+    </header>
+
+    <main>
+        <section class="headline">            
+                <h2>"Hello hikers of the world!"</h2>
+                <h1>HIKING AND ADVENTURE SPORTS<br> SEASON 2023</h1>            
+                <p class="headline__p">Hiking and trekking · Ski and snowboard · Mountainbike · Horseback riding · Mountaineering and climbing · Surf · Sport fishing · Kayak <br> Are part of the adventure that awaits you this new season</p>
+                <h3>2023.04.18(thu) ~ 21(FRI)</h3>
+                <p>@Pucón, región de la Araucanía, Chile</p>            
+        </section>
+
+        <section class="program" id="program">            
+                <h2>Main Program</h2>
+                <hr>
+                <ul class="program__ul">
+                    <li class="program__ul--bike">
+                        <img src="./img/biking.svg" alt="biking">
+                        <h3>Mountain bike</h3>
+                        <p>The full suspension bicycle represents the most important advance in cycling in the 20th century; since it provides cyclists with the possibility of reaching places that in another time were considered inaccessible to said vehicle.</p>
+                    </li>
+                    <li>
+                        <img src="./img/ski.svg" alt="skiing">
+                        <h3>Skiing</h3>
+                        <p>Skiing is a mountain sport that consists of sliding through the snow, by means of two boards attached to the sole of the skier's boots by means of mechanical-robotic fixings.</p>
+                    </li>
+                    <li>
+                        <img src="./img/volcano.svg" alt="volcano">
+                        <h3>Villarrica Volcano</h3>
+                        <p>Visible from miles away, though if you spot a cheeky spurt, you may want to wait a few days until you try to conquer this monstrous, active volcano! The hike is around five hours.</p>
+                    </li>
+                    <li>
+                        <img src="./img/water.svg" alt="water">
+                        <h3>Water sports</h3>
+                        <p>White-water rafting, Canyoning, kayaking, hydrospeed, are some of the water sports that you can enjoy.                      </p>
+                    </li>
+                    <li>
+                        <img src="./img/hiking.svg" alt="hiking">
+                        <h3>Hiking</h3>
+                        <p>Nestled on the shores of Lake Villarrica in Chile, Pucón is heaven for outdoor lovers. It is home to hot springs, active volcanoes, and several national parks.</p>
+                    </li>                    
+                </ul>
+                <button>Join CC Global Summit 215</button>
+                <a href="index.html">See the whole Program</a>                     
+        </section>
+
+        <section class="speakers">
+            <h2>Featured speakers</h2>
+            <hr>
+            <div class="speakersCreated">                         
+            </div>
+        </section>
+
+        <span class="more"><button class="more__button">More<img class="more__button--img" src="./img/less.svg"></button></span>
+
+        <div class="partner hidden"  id="partners">
+            <button class="lessbutton hiddenBtn">Less<img src="./img/more.svg"></button>
+            <h2>Partners</h2>
+            <hr>
+            <div class="partner__img">
+                <img src="./img/brave-logo_.svg" alt="brave_logo">
+                <img src="./img/merrel.svg" alt="merrel">
+                <img src="./img/ironman.svg" alt="image3">
+                <img src="./img/era.svg" alt="image4">
+                <img src="./img/amarte.svg" alt="image5">
+            </div>
+        </div>        
+    </main>   
+
+    <footer class="footer hidden">
+        <img src="./img/Unlimited2.svg" alt="unlimited_logo">
+        <p>2023. Creative CesCon. <br> Some rights Reserved.</p>
+    </footer>    
+    
+</body>
+<script src="./js/menu.js"></script>
+<script src="./js/speakers.js"></script>
+</html>
