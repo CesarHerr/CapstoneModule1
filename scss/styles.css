@@ -287,7 +287,7 @@ a {
   .headline h1 {
     color: rgba(236, 83, 66, 0.6901960784);
     font-weight: 900;
-    font-size: 4em;
+    font-size: 3em;
     background-image: url(../img/tekking.jpg);
     background-size: contain;
     background-repeat: repeat;
@@ -297,17 +297,16 @@ a {
 }
 .headline__p {
   margin-top: 1em;
-  padding: 10px;
+  padding: 15px;
   border: double 3px #fff;
   box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.15);
-  border-top-right-radius: 2rem;
-  border-bottom-left-radius: 2rem;
   width: 90%;
+  min-width: 500px;
+  background-color: rgba(255, 255, 255, 0.3803921569);
 }
 @media screen and (min-width: 768px) {
   .headline__p {
     width: 50%;
-    background-color: rgba(255, 255, 255, 0.5803921569);
   }
 }
 .headline h3 {
@@ -553,7 +552,7 @@ a {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    align-items: center;
+    align-items: fill;
   }
 }
 .program li {
@@ -562,8 +561,6 @@ a {
   justify-content: space-around;
   align-items: center;
   background-color: rgba(100, 93, 93, 0.2549019608);
-  border-top-left-radius: 2rem;
-  border-bottom-right-radius: 2rem;
   padding: 1em;
   width: 95%;
   margin: 1em 0;
@@ -574,10 +571,9 @@ a {
     flex-flow: column nowrap;
     justify-content: space-around;
     align-items: center;
-    margin: 1.5em 1em;
+    margin: 1.5em 0.3em;
     width: 15%;
-    min-width: 200px;
-    height: 20em;
+    min-width: 100px;
   }
 }
 .program li img {

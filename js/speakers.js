@@ -2,7 +2,7 @@ const objectWorks = [
   {
     id: 'speaker1',
     title: 'James Steven',
-    img: 'img/speaker1_.jpg',
+    img: 'img/person1.svg',
     subtitle: 'Certified Mountaineering Instructor and Wilderness First Responder.',
     description2: 'As an instructor and guide for Villarrica volcano expeditions, James Steven has led countless groups to conquer the summit while sharing his passion for mountaineering and respect for nature.',
     class: '',
@@ -10,7 +10,7 @@ const objectWorks = [
   {
     id: 'speaker2',
     title: 'Karen Brown',
-    img: 'img/speaker2_.jpg',
+    img: 'img/person2.svg',
     subtitle: 'Certified rafting with the Chilean Ski Instructors Association.',
     description2: 'As a rafting instructor in Pucón, Chile, she enjoyed teaching and sharing her passion for white-water sports with people from all over the world, in the stunning natural surroundings of the Trancura River.',
     class: '',
@@ -18,7 +18,7 @@ const objectWorks = [
   {
     id: 'speaker3',
     title: 'Maria Martinez',
-    img: 'img/speaker3_.jpg',
+    img: 'img/person3.svg',
     subtitle: 'Certified Ski Instructor with the Chilean Ski Instructors Association',
     description2: "As a ski instructor in Pucón, Chile, Maria Martinez loved teaching beginners and improving advanced skiers' skills in the breathtaking landscapes of the Villarrica volcano.",
     class: 'hidden',
@@ -26,7 +26,7 @@ const objectWorks = [
   {
     id: 'speaker4',
     title: 'Laura Rodriguez.',
-    img: 'img/speaker4_.jpg',
+    img: 'img/person4.svg',
     subtitle: ' Certified Paragliding Instructor with the Chilean Paragliding Federation.',
     description2: ' As a paragliding instructor in Pucón, Chile, Laura Rodriguez enjoyed sharing her knowledge and experience with her students while flying over the stunning scenery of the Lake District.',
     class: 'hidden',
@@ -34,7 +34,7 @@ const objectWorks = [
   {
     id: 'speaker5',
     title: 'Carlos Gomez',
-    img: 'img/speaker5_.jpg',
+    img: 'img/person5.svg',
     subtitle: "Bachelor's Degree in Tourism and Hospitality Management",
     description2: "As a tour guide in Pucón, Chile, Carlos Gomez had the opportunity to showcase the region's natural beauty and cultural heritage, enriching his clients' travel experiences.",
     class: 'hidden',
@@ -42,7 +42,7 @@ const objectWorks = [
   {
     id: 'speaker6',
     title: 'David Lee',
-    img: 'img/speaker6_.jpg',
+    img: 'img/person6.svg',
     subtitle: 'Certified Kayaking Instructor with the American Canoe Association.',
     description2: ' As a kayaking instructor, David Lee has traveled the world teaching beginners and experts in different types of waters, from calm lakes to raging rapids.',
     class: 'hidden',

@@ -287,7 +287,7 @@ a {
   .headline h1 {
     color: rgba(236, 83, 66, 0.6901960784);
     font-weight: 900;
-    font-size: 5em;
+    font-size: 3em;
     background-image: url(../img/tekking.jpg);
     background-size: contain;
     background-repeat: repeat;
@@ -299,11 +299,10 @@ a {
   text-align: center;
   margin-top: 1em;
   padding: 10px;
-  border: double 3px #fff;
+  border: solid 3px #fff;
   box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.15);
-  border-top-right-radius: 2rem;
-  border-bottom-left-radius: 2rem;
   width: 90%;
+  min-width: 600px;
 }
 @media screen and (min-width: 768px) {
   .headline__description {
@@ -359,7 +358,7 @@ a {
 
 .footer {
   padding: 2em;
-  background-color: rgba(211, 211, 211, 0.8470588235);
+  background-color: rgba(255, 255, 255, 0.9098039216);
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -368,20 +367,37 @@ a {
 @media screen and (min-width: 768px) {
   .footer {
     padding: 0;
+    background-color: rgba(39, 42, 49, 0.9294117647);
   }
 }
-.footer img {
+.footer__desktopimg {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .footer__desktopimg {
+    display: inline;
+    margin-top: 0.5em;
+    width: 30%;
+  }
+}
+.footer__mobileimg {
   width: 30%;
 }
 @media screen and (min-width: 768px) {
-  .footer img {
-    width: 20%;
+  .footer__mobileimg {
+    display: none;
   }
 }
 .footer p {
+  margin-left: 4em;
   color: #272a31;
   font-weight: 400;
   font-size: 0.8rem;
+}
+@media screen and (min-width: 768px) {
+  .footer p {
+    color: #d3d3d3;
+  }
 }
 
 .seethepast {
@@ -481,4 +497,9 @@ a {
   width: 15%;
   max-width: 10em;
   margin: 0.3em;
+}
+@media screen and (min-width: 768px) {
+  .partner {
+    display: none;
+  }
 }/*# sourceMappingURL=aboutstyles.css.map */

@@ -61,7 +61,7 @@ $color: (
     @include font(map-get($color, "fresh"), 900, 3rem);
 
     @include desktop () {
-      @include font( #ec5342b0, 900 , 4em );
+      @include font( #ec5342b0, 900 , 3em );
 
       background-image: url(../img/tekking.jpg);
       background-size: contain;
@@ -72,16 +72,16 @@ $color: (
 
   &__p {
     margin-top: 1em;
-    padding: 10px;
+    padding: 15px;
     border: double 3px #fff;
-    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.15);
-    border-top-right-radius: 2rem;
-    border-bottom-left-radius: 2rem;
+    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.15);    
     width: 90%;
+    min-width: 500px;
+    background-color: #ffffff61;
 
     @include desktop () {
       width: 50%;
-      background-color: #ffffff94;
+      
     }
   }
 
@@ -301,16 +301,14 @@ $color: (
       padding: 3em 0;
       text-align: center;
 
-      @include flexible(row, wrap, center, center);
+      @include flexible(row, wrap, center, fill);
     }
   }
 
   li {
     @include flexible(row, nowrap, space-around, center);
 
-    background-color: #645d5d41;
-    border-top-left-radius: 2rem;
-    border-bottom-right-radius: 2rem;
+    background-color: #645d5d41;    
     padding: 1em;
     width: 95%;
     margin: 1em 0;
@@ -318,10 +316,10 @@ $color: (
     @include desktop () {
       @include flexible(column, nowrap, space-around, center);
 
-      margin: 1.5em 1em;
+      margin: 1.5em 0.3em;
       width: 15%;
-      min-width: 200px;
-      height: 20em;
+      min-width: 100px;
+      
     }
 
     img {
