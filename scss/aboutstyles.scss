@@ -220,7 +220,7 @@ $color: (
       &:hover {
         cursor: pointer;
         background-color: transparent;
-        font-size: 3.2rem;
+        transform: scale(1.2, 1.2);
         transition: all 0.4s ease;
       }
     }

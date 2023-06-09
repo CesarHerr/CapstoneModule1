@@ -171,7 +171,7 @@ a {
     justify-content: flex-end;
     align-items: center;
     width: 50%;
-    min-width: 500px;
+    min-width: 550px;
     background-color: rgba(255, 255, 255, 0.4235294118);
     margin-right: 12%;
   }
@@ -521,7 +521,7 @@ a {
 .seethepast__img p:hover {
   cursor: pointer;
   background-color: transparent;
-  font-size: 3.2rem;
+  transform: scale(1.2, 1.2);
   transition: all 0.4s ease;
 }
 

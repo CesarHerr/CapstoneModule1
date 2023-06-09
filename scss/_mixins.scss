@@ -1,7 +1,7 @@
-@mixin font($argumento1 , $argumento2 , $argumento3) {
-  color: $argumento1;
-  font-weight: $argumento2;
-  font-size: $argumento3;
+@mixin font($argument1 , $argument2 , $argument3) {
+  color: $argument1;
+  font-weight: $argument2;
+  font-size: $argument3;
 }
 
 @mixin desktop() {
