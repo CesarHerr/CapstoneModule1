@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./scss/styles.css" />
+    <title>Capstone Module 1</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__social">
+        <ul class="header__social--ul">
+          <li>
+            <img class="facebook" src="./img/facebook.svg" alt="facebook" />
+            <img class="twitter" src="./img/twitterWhite.svg" alt="Twitter" />
+          </li>
+          <li>English</li>
+          <li>My Page</li>
+          <li>Logout</li>
+        </ul>
+      </div>
+      <nav class="header__links">
+        <a class="header__links--logo" href="index.html"
+          ><img src="./img/Unlimited2.svg" alt="image_logo"
+        /></a>
+        <ul class="header__links--menu">
+          <a class="header__links--logo navbar_logo" href="index.html"
+            ><img src="./img/Unlimited2.svg" alt="image_logo"
+          /></a>
+          <button class="hamburger-close">
+            <img src="./img/xIcon.png" alt="hamburger_close" />
+          </button>
+          <li><a href="about.html">About</a></li>
+          <li><a href="#program">Program</a></li>
+          <li><a href="#speakers">Speakers</a></li>
+          <li><a href="#partners">Sponsor</a></li>
+          <li><a href="#">News</a></li>
+          <li>
+            <a href="#"><span class="campaign__border">CC Campaign</span></a>
+          </li>
+        </ul>
+        <button class="hamburger-open">
+          <img src="./img/Hamburger_icon.png" alt="hamburger-icon" />
+        </button>
+      </nav>
+    </header>
+    
+    <main>
+      <section class="headline">
+        <h2>Select Tickets</h2>
+        <hr />
+        <p class="headline__p">
+          <span>STEP 1</span> Please select the day when you want to join to
+          Hiking and Adventures Sports 2023
+        </p>
+        <table class="reservation">
+          <tr class="ticket">
+            <th scope="ticket">Ticket</th>
+            <th>1-Day-Ticket</th>
+            <th colspan="2">2-Day-Ticket</th>
+            <th>CC Affiliate/Partners</th>
+          </tr>
+          <tr>
+            <th>Date</th>
+            <td>15. Oct (Thu)</td>
+            <td>16. Oct (Fri)</td>
+            <td>15.-16. Oct (Thu-Fri)</td>
+            <td>15.-16. Oct (Thu-Fri)</td>
+          </tr>
+          <tr>
+            <th>Normal</th>
+            <td>$7000</td>
+            <td>$7000</td>
+            <td>$10000</td>
+            <td>$0</td>
+          </tr>
+          <tr>
+            <th>Students</th>
+            <td>$3000</td>
+            <td>$3000</td>
+            <td>$5000</td>
+            <td>$0</td>
+          </tr>
+        </table>
+      </section>
+    </main>
+  </body>
+</html>
