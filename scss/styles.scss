@@ -233,7 +233,8 @@ $color: (
     @include flexible(row, nowrap, center, center);
 
     &:hover {
-      font-size: 2em;
+      transform: scaleY(1.3);
+      transition: all 0.3s ease-in;
       cursor: pointer;
     }
 
@@ -260,7 +261,8 @@ $color: (
   padding: 0.3em 0;
 
   &:hover {
-    font-size: 1.2em;
+    transform: scaleY(1.3);
+    transition: all 0.2s ease-in;
     cursor: pointer;
   }
 

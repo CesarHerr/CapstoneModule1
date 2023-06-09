@@ -76,17 +76,19 @@ const lessButton = document.querySelector('.lessbutton');
 const speakerHidden = document.querySelectorAll('.hidden');
 
 moreButton.addEventListener('click', () => {
-  for (let i = 0; i < speakerHidden.length; i += 1) {
-    speakerHidden[i].classList.toggle('hidden');
-  }
+  speakerHidden.forEach((hide) => {
+    hide.classList.toggle('hidden');
+  });
+
   lessButton.classList.toggle('hiddenBtn');
   document.querySelector('.more__button').style.display = 'none';
 });
 
 lessButton.addEventListener('click', () => {
-  for (let i = 0; i < speakerHidden.length; i += 1) {
-    speakerHidden[i].classList.toggle('hidden');
-  }
+  speakerHidden.forEach((hide) => {
+    hide.classList.toggle('hidden');
+  });
+
   lessButton.classList.toggle('hiddenBtn');
   document.querySelector('.more__button').style.display = 'inline';
 });
