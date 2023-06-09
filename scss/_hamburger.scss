@@ -72,7 +72,6 @@ $color: (
     @include flexible(column, nowrap, center, flex-start);
     @include font(#272a31, 900, 2rem);
 
-
     .navbar_logo {
       display: inline;
       top: 50px;
