@@ -40,6 +40,36 @@ $color: (
   }
 }
 
+h2 {
+  @include font(map-get($color, "dark"), 400, 1.3em);
+
+  @include desktop() {
+    @include font(map-get($color, "dark"), 700, 1.7em);
+  }
+}
+
+p {
+  margin-top: 1rem;
+  padding: 25px;
+  border: solid 2px map-get($color, light);
+  border-radius: 3rem;
+  width: 95%;
+  min-width: 320px;
+  background-color: #ffffff84;
+  text-align: center;
+
+  @include desktop() {
+    border-radius: 4rem;
+    width: 60%;
+    padding: 10px 25px;
+  }
+
+  span {
+    @include font(map-get($color, "fresh"), 800, 1rem);
+    margin-right: 0.5rem;
+  }
+}
+
 .headline {
   padding: 100px 1em;
   background-color: #ffffffcb;
@@ -50,36 +80,6 @@ $color: (
   }
 
   @include flexible(column, wrap, center, center);
-
-  h2 {
-    @include font(map-get($color, "dark"), 400, 1.3em);
-
-    @include desktop() {
-      @include font(map-get($color, "dark"), 700, 1.7em);
-    }
-  }
-
-  &__p {
-    margin-top: 1rem;
-    padding: 25px;
-    border: solid 2px #fff;
-    border-radius: 3rem;
-    width: 95%;
-    min-width: 320px;
-    background-color: #ffffff84;
-    text-align: center;
-
-    @include desktop() {
-      border-radius: 4rem;
-      width: 60%;
-      padding: 10px 25px;
-    }
-
-    span {
-      @include font(map-get($color, "fresh"), 800, 1rem);
-      margin-right: 0.5rem;
-    }
-  }
 
   table {
     text-align: center;
@@ -131,9 +131,45 @@ $color: (
       }
     }
   }
+
   &__rhombus {
     width: 5rem;
     display: block;
     margin: -2.5rem auto;
   }
 }
+
+.lunch {
+  padding-top: 100px;
+  background-color: #ffffffee;
+  display: grid;
+  place-items: center;
+      
+  &__traditional, &__vegan {    
+    width: 50%;
+    margin-top: 50px;
+    padding: 0.5rem 2rem;
+    border: solid 1px map-get($color , light );
+    text-align: center;
+    display: grid;
+    place-items: center;
+
+    div {
+      display: inline;
+      background-color: #ffffffcb;
+      width:150%;
+      height: 150%;
+      padding-top: 0.5rem;
+    }
+
+    ul {
+      @include flexible (column, nowrap, space-around, center);
+      li {
+        margin-top: 0.5rem;
+        padding: 0.4rem 0;
+      }
+    }
+
+  }
+}
+
