@@ -1,0 +1,139 @@
+@import "_reset";
+@import "_mixins";
+@import "_hamburger";
+
+$color: (
+  "dark": #312827,
+  "fresh": #ec5242,
+  "light": #d3d3d3,
+);
+
+.header__social {
+  display: none;
+
+  @include desktop() {
+    width: 100%;
+
+    @include flexible(row, nowrap, flex-end, center);
+
+    background-color: map-get($color, "dark");
+    color: map-get($color, "light");
+    padding: 0.6em 0;
+
+    &--ul {
+      width: 40%;
+      min-width: 550px;
+      padding-right: 12em;
+
+      @include flexible(row, nowrap, space-around, center);
+
+      img {
+        width: 20px;
+        margin-left: 1em;
+        display: inline;
+      }
+
+      .facebook {
+        width: 15px;
+      }
+    }
+  }
+}
+
+.headline {
+  padding: 100px 1em;
+  background-color: #ffffffcb;
+
+  @include desktop() {
+    margin: 0;
+    padding: 5em 8em;
+  }
+
+  @include flexible(column, wrap, center, center);
+
+  h2 {
+    @include font(map-get($color, "dark"), 400, 1.3em);
+
+    @include desktop() {
+      @include font(map-get($color, "dark"), 700, 1.7em);
+    }
+  }
+
+  &__p {
+    margin-top: 1rem;
+    padding: 25px;
+    border: solid 2px #fff;
+    border-radius: 3rem;
+    width: 95%;
+    min-width: 320px;
+    background-color: #ffffff84;
+    text-align: center;
+
+    @include desktop() {
+      border-radius: 4rem;
+      width: 60%;
+      padding: 10px 25px;
+    }
+
+    span {
+      @include font(map-get($color, "fresh"), 800, 1rem);
+      margin-right: 0.5rem;
+    }
+  }
+
+  table {
+    text-align: center;
+    margin-top: 2em;
+    border: solid 0.4rem transparent;
+    border-image: repeating-linear-gradient(
+      to bottom right,
+      transparent 0%,
+      #e66465 1% 2%,
+      #fff 3% 4%,
+      #9198e5 5% 6%,
+      #fff 7% 8%
+    );
+
+    border-image-slice: 1;
+
+    tbody {
+      background-color: #ffffff84;
+    }
+
+    td {
+      padding: 0.1em;
+      font-size: 0.8rem;
+      border-top: solid 2px #c2c0c2;
+      border-right: solid 2px #c2c0c2;
+    }
+
+    td:last-child {
+      border-right: none;
+    }
+
+    th {
+      padding: 0.1em;
+      border-right: solid 2px #c2c0c2;
+    }
+
+    th:last-child {
+      border: none;
+    }
+
+    @include desktop {
+      td {
+        padding: 1em;
+        font-size: 1rem;
+      }
+
+      th {
+        padding: 1em;
+      }
+    }
+  }
+  &__rhombus {
+    width: 5rem;
+    display: block;
+    margin: -2.5rem auto;
+  }
+}

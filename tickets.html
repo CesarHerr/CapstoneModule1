@@ -10,8 +10,8 @@
       href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./scss/styles.css" />
-    <title>Capstone Module 1</title>
+    <link rel="stylesheet" href="./scss/tickets.css" />
+    <title>Tickets</title>
   </head>
   <body>
     <header class="header">
@@ -35,7 +35,7 @@
             ><img src="./img/Unlimited2.svg" alt="image_logo"
           /></a>
           <button class="hamburger-close">
-            <img src="./img/xIcon.png" alt="hamburger_close" />
+            <img src="./img/xIcon.png" alt="x close" />
           </button>
           <li><a href="about.html">About</a></li>
           <li><a href="#program">Program</a></li>
@@ -51,7 +51,7 @@
         </button>
       </nav>
     </header>
-    
+
     <main>
       <section class="headline">
         <h2>Select Tickets</h2>
@@ -61,34 +61,42 @@
           Hiking and Adventures Sports 2023
         </p>
         <table class="reservation">
-          <tr class="ticket">
-            <th scope="ticket">Ticket</th>
-            <th>1-Day-Ticket</th>
-            <th colspan="2">2-Day-Ticket</th>
-            <th>CC Affiliate/Partners</th>
-          </tr>
-          <tr>
-            <th>Date</th>
-            <td>15. Oct (Thu)</td>
-            <td>16. Oct (Fri)</td>
-            <td>15.-16. Oct (Thu-Fri)</td>
-            <td>15.-16. Oct (Thu-Fri)</td>
-          </tr>
-          <tr>
-            <th>Normal</th>
-            <td>$7000</td>
-            <td>$7000</td>
-            <td>$10000</td>
-            <td>$0</td>
-          </tr>
-          <tr>
-            <th>Students</th>
-            <td>$3000</td>
-            <td>$3000</td>
-            <td>$5000</td>
-            <td>$0</td>
-          </tr>
-        </table>
+          <thead>
+            <tr class="reservation__ticket">
+              <th scope="ticket">Ticket</th>
+              <th>1-Day-Ticket</th>
+              <th colspan="2">2-Day-Ticket</th>
+              <th>CC Affiliate/Partners</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Date</td>
+              <td>15. Oct (Thu)</td>
+              <td>16. Oct (Fri)</td>
+              <td>15.-16. Oct (Thu-Fri)</td>
+              <td>15.-16. Oct (Thu-Fri)</td>
+            </tr>
+            <tr>
+              <td>Normal</td>
+              <td>$7000</td>
+              <td>$7000</td>
+              <td>$10000</td>
+              <td>$0</td>
+            </tr>
+            <tr>
+              <td>Students</td>
+              <td>$3000</td>
+              <td>$3000</td>
+              <td>$5000</td>
+              <td>$0</td>
+            </tr>
+          </tbody>
+        </table>        
+      </section>
+      <img class="headline__rhombus" src="./img/romboRed.svg" alt="rhombus red">
+      <section>
+        <h1>Section 2</h1>
       </section>
     </main>
   </body>
