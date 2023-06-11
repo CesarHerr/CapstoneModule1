@@ -67,9 +67,10 @@
 
 
 ```
-- HTML & CSS3
-- Sass
-- JavaScript
+- **[Responsive Design]**
+- **[Mobile first Design]**
+- **[Dom Manipulation]**
+- **[application Deploy ]**
 
 ```
 
