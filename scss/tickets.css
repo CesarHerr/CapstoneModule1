@@ -354,18 +354,25 @@ p span {
 .lunch__traditional, .lunch__vegan {
   width: 50%;
   margin-top: 50px;
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 0rem;
   border: solid 1px #d3d3d3;
   text-align: center;
   display: grid;
+  border-radius: 0.5rem;
   place-items: center;
+}
+@media screen and (min-width: 768px) {
+  .lunch__traditional, .lunch__vegan {
+    width: 80%;
+  }
 }
 .lunch__traditional div, .lunch__vegan div {
   display: inline;
-  background-color: rgba(255, 255, 255, 0.7960784314);
-  width: 150%;
-  height: 150%;
+  background-color: rgba(231, 227, 227, 0.5176470588);
+  width: 100%;
+  height: 140%;
   padding-top: 0.5rem;
+  font-size: 1.2rem;
 }
 .lunch__traditional ul, .lunch__vegan ul {
   display: flex;
@@ -373,7 +380,47 @@ p span {
   justify-content: space-around;
   align-items: center;
 }
+@media screen and (min-width: 768px) {
+  .lunch__traditional ul, .lunch__vegan ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+  }
+}
 .lunch__traditional ul li, .lunch__vegan ul li {
-  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  margin-top: 1rem;
   padding: 0.4rem 0;
+}
+
+.btnSubmit {
+  width: 100%;
+  background-color: #ec5242;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.3rem;
+  display: block;
+  padding: 1rem;
+  margin: 50px 0;
+}
+.btnSubmit:hover {
+  cursor: pointer;
+  background-color: #fff5e1;
+  border: solid 1px #ec5242;
+  color: #ec5242;
+  transform: scale(1.2, 1.2);
+  transition: all 0.4s ease-in-out;
+}
+.btnSubmit:active {
+  background-color: #ec5242;
+  color: #fff;
+}
+@media screen and (min-width: 768px) {
+  .btnSubmit {
+    width: 20%;
+    border-radius: 0.4rem;
+    padding: 1rem;
+  }
 }/*# sourceMappingURL=tickets.css.map */

@@ -144,32 +144,66 @@ p {
   background-color: #ffffffee;
   display: grid;
   place-items: center;
-      
-  &__traditional, &__vegan {    
+
+  &__traditional,
+  &__vegan {
     width: 50%;
     margin-top: 50px;
-    padding: 0.5rem 2rem;
-    border: solid 1px map-get($color , light );
+    padding: 0.5rem 0rem;
+    border: solid 1px map-get($color, light);
     text-align: center;
     display: grid;
+    border-radius: 0.5rem;
     place-items: center;
+    @include desktop() {
+      width: 80%;
+    }
 
     div {
       display: inline;
-      background-color: #ffffffcb;
-      width:150%;
-      height: 150%;
+      background-color: #e7e3e384;
+      width: 100%;
+      height: 140%;
       padding-top: 0.5rem;
+      font-size: 1.2rem;
     }
 
     ul {
-      @include flexible (column, nowrap, space-around, center);
+      @include flexible(column, nowrap, space-around, center);
+      @include desktop() {
+        @include flexible(row, nowrap, space-between, center);
+        width: 90%;
+      }
       li {
-        margin-top: 0.5rem;
+        font-size: 1.2rem;
+        margin-top: 1rem;
         padding: 0.4rem 0;
       }
     }
-
   }
 }
-
+.btnSubmit {
+  width: 100%;
+  background-color: map-get($color, fresh);
+  @include font(#fff, 700, 1.3rem);
+  display: block;
+  padding: 1rem;
+  margin: 50px 0;
+  &:hover {
+    cursor: pointer;
+    background-color: #fff5e1;
+    border: solid 1px map-get($color, fresh);
+    color: map-get($color, fresh);
+    transform: scale(1.2, 1.2);
+    transition: all 0.4s ease-in-out;
+  }  
+  &:active {
+    background-color: map-get($color, fresh);
+    color: #fff;
+  }
+  @include desktop() {
+    width: 20%;
+    border-radius: 0.4rem;
+    padding: 1rem;      
+  }
+}
