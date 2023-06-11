@@ -66,6 +66,7 @@ p {
 
   span {
     @include font(map-get($color, "fresh"), 800, 1rem);
+
     margin-right: 0.5rem;
   }
 }
@@ -85,15 +86,15 @@ p {
     text-align: center;
     margin-top: 2em;
     border: solid 0.4rem transparent;
-    border-image: repeating-linear-gradient(
-      to bottom right,
-      transparent 0%,
-      #e66465 1% 2%,
-      #fff 3% 4%,
-      #9198e5 5% 6%,
-      #fff 7% 8%
-    );
-
+    border-image:
+      repeating-linear-gradient(
+        to bottom right,
+        transparent 0%,
+        #e66465 1% 2%,
+        #fff 3% 4%,
+        #9198e5 5% 6%,
+        #fff 7% 8%
+      );
     border-image-slice: 1;
 
     tbody {
@@ -130,6 +131,11 @@ p {
         padding: 1em;
       }
     }
+
+    input[name="ticket"] {
+      display: block;
+      margin: 0 auto;
+    }
   }
 
   &__rhombus {
@@ -141,7 +147,7 @@ p {
 
 .lunch {
   padding-top: 100px;
-  background-color: #ffffffee;
+  background-color: #fffe;
   display: grid;
   place-items: center;
 
@@ -149,12 +155,13 @@ p {
   &__vegan {
     width: 50%;
     margin-top: 50px;
-    padding: 0.5rem 0rem;
+    padding: 0.5rem 0;
     border: solid 1px map-get($color, light);
     text-align: center;
     display: grid;
     border-radius: 0.5rem;
     place-items: center;
+
     @include desktop() {
       width: 80%;
     }
@@ -170,10 +177,13 @@ p {
 
     ul {
       @include flexible(column, nowrap, space-around, center);
+
       @include desktop() {
         @include flexible(row, nowrap, space-between, center);
+
         width: 90%;
       }
+
       li {
         font-size: 1.2rem;
         margin-top: 1rem;
@@ -182,13 +192,17 @@ p {
     }
   }
 }
+
 .btnSubmit {
   width: 100%;
   background-color: map-get($color, fresh);
+
   @include font(#fff, 700, 1.3rem);
+
   display: block;
   padding: 1rem;
   margin: 50px 0;
+
   &:hover {
     cursor: pointer;
     background-color: #fff5e1;
@@ -196,14 +210,89 @@ p {
     color: map-get($color, fresh);
     transform: scale(1.2, 1.2);
     transition: all 0.4s ease-in-out;
-  }  
+  }
+
   &:active {
     background-color: map-get($color, fresh);
     color: #fff;
   }
+
   @include desktop() {
     width: 20%;
     border-radius: 0.4rem;
-    padding: 1rem;      
+    padding: 1rem;
+  }
+}
+
+//popup confirmation
+
+.popup {
+  position: fixed;
+  backdrop-filter: blur(5px);
+  background-image: url(../img/UnlimitedWhite.png);
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+}
+
+.confirmation {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  width: 90%;
+  height: 60vh;
+  background-color: rgba(255, 255, 255, 0.856);
+  border-radius: 4rem 0.5rem 4rem 0.5rem;
+  text-align: center;
+
+  img {
+    display: inline;
+    width: 50px;
+  }
+
+  p {
+    margin: 80px auto;
+  }
+
+  h2 {
+    display: inline;
+
+    @include font(map-get($color, dark), bolder, 1.2rem);
+  }
+
+  span {
+    display: inline;
+    position: relative;
+    top: 50px;
+  }
+
+  button {
+    width: 50%;
+    margin: 20px 0;
+    border: none;
+    border-radius: 0.4rem;
+    padding: 1rem;
+    background-color: map-get($color, fresh);
+
+    @include font(#fff, bolder, 1.3rem);
+
+    &:hover {
+      cursor: pointer;
+      background-color: #fff5e1;
+      border: solid 1px map-get($color, fresh);
+      color: map-get($color, fresh);
+      transform: scale(1.2, 1.2);
+      transition: all 0.4s ease-in-out;
+    }
+
+    &:active {
+      background-color: map-get($color, fresh);
+      color: #fff;
+    }
   }
 }
